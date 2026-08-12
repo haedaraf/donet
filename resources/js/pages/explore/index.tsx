@@ -123,7 +123,7 @@ export default function Explore({ donations, categories = [], filters = {} }: { 
                     ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {donations?.data?.map((item: any) => (
-                                <Link href={`/donations/${item.id}`} key={item.id} className="bg-white border border-gray-200 rounded-[24px] overflow-hidden hover:shadow-lg transition-shadow group flex flex-col">
+                                <Link href={`/explore/${item.id}`} key={item.id} className="bg-white border border-gray-200 rounded-[24px] overflow-hidden hover:shadow-lg transition-shadow group flex flex-col">
                                     <div className="h-48 bg-gray-100 relative overflow-hidden">
                                         {getPrimaryImage(item.images) ? (
                                             <img src={getPrimaryImage(item.images)!} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />

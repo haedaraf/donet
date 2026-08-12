@@ -34,7 +34,7 @@ export function RoleSidebar() {
         recipient: [
             { name: 'Dashboard', icon: LayoutGrid, href: dashboard(), active: url === '/dashboard' },
             { name: 'Cari Barang', icon: Search, href: '/explore', active: url.startsWith('/explore'), badge: null },
-            { name: 'Permintaan Saya', icon: FileText, href: '#', badge: 1 },
+            { name: 'Permintaan Saya', icon: FileText, href: '/requests', active: url.startsWith('/requests'), badge: null },
             { name: 'Riwayat Saya', icon: History, href: '#', badge: null },
             { name: 'Pesan Masuk', icon: MessageSquare, href: '#', badge: 3 },
             { name: 'Notifikasi', icon: Bell, href: '#', badge: 1 },
