@@ -41,6 +41,20 @@ class HandleInertiaRequests extends Middleware
             'auth' => [
                 'user' => $request->user(),
             ],
+            'active_conversations_count' => $request->user() 
+                ? \App\Models\Conversation::whereHas('participants', function ($query) use ($request) {
+                    $query->where('user_id', $request->user()->id);
+                })->whereHas('donationRequest', function ($query) {
+                    $query->where('status', 'approved');
+                })->count() 
+                : 0,
+            'unread_notifications_count' => $request->user()
+                ? ($request->user()->role === 'donor'
+                    ? \App\Models\DonationRequest::whereHas('donation', function ($query) use ($request) {
+                        $query->where('user_id', $request->user()->id);
+                    })->where('status', 'pending')->count()
+                    : \App\Models\Notification::where('user_id', $request->user()->id)->where('is_read', false)->count())
+                : 0,
             'sidebarOpen' => ! $request->hasCookie('sidebar_state') || $request->cookie('sidebar_state') === 'true',
         ];
     }

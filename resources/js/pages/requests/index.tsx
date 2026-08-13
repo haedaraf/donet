@@ -74,7 +74,7 @@ export default function RequestsIndex({ requests }: { requests: any }) {
                             return (
                                 <div key={req.id} className="bg-white rounded-3xl border border-gray-200 overflow-hidden flex flex-col md:flex-row hover:shadow-md transition-shadow">
                                     {/* Image */}
-                                    <div className="w-full md:w-56 shrink-0 min-h-[192px] bg-gray-100 relative">
+                                    <div className="w-full md:w-48 shrink-0 h-48 md:h-auto min-h-[192px] bg-gray-100 relative overflow-hidden">
                                         {getPrimaryImage(req.donation?.images) ? (
                                             <img src={getPrimaryImage(req.donation.images)!} alt={req.donation?.title} className="absolute inset-0 w-full h-full object-cover" />
                                         ) : (
@@ -109,11 +109,12 @@ export default function RequestsIndex({ requests }: { requests: any }) {
                                             )}
 
                                             {req.status === 'approved' && (
-                                                <button
-                                                    className="shrink-0 bg-[#5170FF] hover:bg-[#405ce6] text-white px-5 py-2.5 rounded-xl text-[13px] font-bold transition-colors shadow-sm"
+                                                <Link
+                                                    href="/chats"
+                                                    className="shrink-0 bg-[#5170FF] hover:bg-[#405ce6] text-white px-5 py-2.5 rounded-xl text-[13px] font-bold transition-colors shadow-sm inline-flex items-center justify-center"
                                                 >
                                                     Chat Donatur
-                                                </button>
+                                                </Link>
                                             )}
                                         </div>
                                         

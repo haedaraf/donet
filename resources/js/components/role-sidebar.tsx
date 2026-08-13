@@ -16,7 +16,7 @@ import { dashboard } from '@/routes';
 import { Auth } from '@/types';
 
 export function RoleSidebar() {
-    const { auth } = usePage<{ auth: Auth }>().props;
+    const { auth, active_conversations_count, unread_notifications_count } = usePage<{ auth: Auth, active_conversations_count?: number, unread_notifications_count?: number }>().props;
     const role = auth.user.role || 'donor'; // fallback
     const url = usePage().url;
 
@@ -25,9 +25,9 @@ export function RoleSidebar() {
         donor: [
             { name: 'Dashboard', icon: LayoutGrid, href: dashboard(), active: url === '/dashboard' },
             { name: 'Barang Saya', icon: Box, href: '/donations', active: url.startsWith('/donations'), badge: null },
-            { name: 'Riwayat Donasi', icon: History, href: '#', badge: null },
-            { name: 'Pesan Masuk', icon: MessageSquare, href: '#', badge: 3 },
-            { name: 'Notifikasi', icon: Bell, href: '#', badge: 1 },
+            { name: 'Riwayat Donasi', icon: History, href: '/donor-history', active: url.startsWith('/donor-history'), badge: null },
+            { name: 'Pesan Masuk', icon: MessageSquare, href: '/chats', active: url.startsWith('/chats'), badge: active_conversations_count || null },
+            { name: 'Notifikasi', icon: Bell, href: '/notifications', active: url.startsWith('/notifications'), badge: unread_notifications_count || null },
             { name: 'Profil Saya', icon: UserIcon, href: '/settings/profile', active: url.startsWith('/settings/profile'), badge: null },
             { name: 'Pengaturan', icon: Settings, href: '#', badge: null },
         ],
@@ -35,9 +35,9 @@ export function RoleSidebar() {
             { name: 'Dashboard', icon: LayoutGrid, href: dashboard(), active: url === '/dashboard' },
             { name: 'Cari Barang', icon: Search, href: '/explore', active: url.startsWith('/explore'), badge: null },
             { name: 'Permintaan Saya', icon: FileText, href: '/requests', active: url.startsWith('/requests'), badge: null },
-            { name: 'Riwayat Saya', icon: History, href: '#', badge: null },
-            { name: 'Pesan Masuk', icon: MessageSquare, href: '#', badge: 3 },
-            { name: 'Notifikasi', icon: Bell, href: '#', badge: 1 },
+            { name: 'Riwayat Saya', icon: History, href: '/recipient-history', active: url.startsWith('/recipient-history'), badge: null },
+            { name: 'Pesan Masuk', icon: MessageSquare, href: '/chats', active: url.startsWith('/chats'), badge: active_conversations_count || null },
+            { name: 'Notifikasi', icon: Bell, href: '/user-notifications', active: url.startsWith('/user-notifications'), badge: unread_notifications_count || null },
             { name: 'Profil Saya', icon: UserIcon, href: '/settings/profile', active: url.startsWith('/settings/profile'), badge: null },
             { name: 'Pengaturan', icon: Settings, href: '#', badge: null },
         ],
