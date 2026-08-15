@@ -6,7 +6,7 @@ Route::inertia('/', 'welcome')->name('home');
 Route::inertia('/cara-kerja', 'CaraKerja')->name('cara-kerja');
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    Route::inertia('dashboard', 'dashboard')->name('dashboard');
+    Route::get('dashboard', [\App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
     Route::resource('donations', \App\Http\Controllers\DonationController::class);
     Route::get('explore', [\App\Http\Controllers\ExploreController::class, 'index'])->name('explore.index');
     Route::get('explore/{id}', [\App\Http\Controllers\ExploreController::class, 'show'])->name('explore.show');

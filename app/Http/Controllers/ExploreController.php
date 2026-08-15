@@ -53,7 +53,14 @@ class ExploreController extends Controller
 
     public function show($id)
     {
-        $donation = Donation::with(['images', 'category', 'user'])->where('status', 'published')->findOrFail($id);
+        $donation = Donation::with(['images', 'category', 'user'])->findOrFail($id);
+        
+        // If not published, only the owner can view it
+        if ($donation->status !== 'published') {
+            if (!Auth::check() || Auth::id() !== $donation->user_id) {
+                abort(404);
+            }
+        }
         
         // Check if current user has already requested this
         $hasRequested = false;

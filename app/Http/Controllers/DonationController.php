@@ -28,6 +28,14 @@ class DonationController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     */
+    public function show(Donation $donation)
+    {
+        return redirect()->route('explore.show', $donation->id);
+    }
+
+    /**
      * Show the form for creating a new resource.
      */
     public function create()

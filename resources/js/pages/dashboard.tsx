@@ -3,8 +3,43 @@ import DashboardLayout from '@/layouts/dashboard-layout';
 import { Plus, MoreVertical, Circle } from 'lucide-react';
 import { Auth } from '@/types';
 
+const getPrimaryImage = (images: any[]) => {
+    if (!images || images.length === 0) return null;
+    const primary = images.find(img => img.is_primary);
+    const img = primary ? primary.image : images[0].image;
+    if (!img) return null;
+    return img.startsWith('http') ? img : `/storage/${img}`;
+};
+
+const formatDate = (dateString: string) => {
+    if (!dateString) return '-';
+    const d = new Date(dateString);
+    return d.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+};
+
+const getStatusBadge = (status: string) => {
+    switch (status) {
+        case 'completed':
+            return <span className="inline-flex px-3 py-1 text-[11px] font-medium text-emerald-500 border border-emerald-500 rounded-md bg-emerald-50">Selesai</span>;
+        case 'approved':
+            return <span className="inline-flex px-3 py-1 text-[11px] font-medium text-[#5170FF] border border-[#5170FF] rounded-md bg-[#F5F7FF]">Diproses</span>;
+        case 'rejected':
+            return <span className="inline-flex px-3 py-1 text-[11px] font-medium text-red-500 border border-red-500 rounded-md bg-red-50">Ditolak</span>;
+        case 'cancelled':
+            return <span className="inline-flex px-3 py-1 text-[11px] font-medium text-gray-500 border border-gray-500 rounded-md bg-gray-50">Dibatalkan</span>;
+        case 'pending':
+            return <span className="inline-flex px-3 py-1 text-[11px] font-medium text-amber-500 border border-amber-500 rounded-md bg-amber-50">Menunggu</span>;
+        case 'published':
+            return <span className="inline-flex px-3 py-1 text-[11px] font-medium text-emerald-500 border border-emerald-500 rounded-md bg-emerald-50">Tersedia</span>;
+        case 'draft':
+            return <span className="inline-flex px-3 py-1 text-[11px] font-medium text-gray-500 border border-gray-500 rounded-md bg-gray-50">Draft</span>;
+        default:
+            return <span className="inline-flex px-3 py-1 text-[11px] font-medium text-gray-500 border border-gray-500 rounded-md bg-gray-50">{status}</span>;
+    }
+};
+
 // Donor Dashboard Component
-function DonorDashboard({ user }: { user: any }) {
+function DonorDashboard({ user, stats, recentItems }: { user: any, stats: any[], recentItems: any[] }) {
     return (
         <div className="p-8 min-w-full max-w-6xl">
             {/* Header */}
@@ -24,22 +59,17 @@ function DonorDashboard({ user }: { user: any }) {
             {/* Ringkasan */}
             <h2 className="text-[20px] font-bold text-gray-900 mb-4">Ringkasan</h2>
             <div className="grid grid-cols-4 gap-4 mb-8">
-                {[1, 2, 3, 4].map((i) => (
-                    <div key={i} className="h-24 bg-white border border-gray-300 rounded-2xl"></div>
+                {stats.map((stat, i) => (
+                    <div key={i} className={`h-24 bg-white border rounded-2xl flex flex-col justify-center px-6 ${stat.color.replace('bg-', 'bg-opacity-10 bg-')}`}>
+                        <div className="text-[28px] font-bold leading-none mb-1">{stat.value}</div>
+                        <div className="text-[12px] font-medium opacity-80">{stat.label}</div>
+                    </div>
                 ))}
             </div>
 
             {/* Barang Saya */}
-            <h2 className="text-[20px] font-bold text-gray-900 mb-4">Barang Saya</h2>
+            <h2 className="text-[20px] font-bold text-gray-900 mb-4">Aktivitas Terkini</h2>
             <div className="bg-white border border-gray-300 rounded-2xl overflow-hidden">
-                {/* Tabs */}
-                <div className="flex border-b border-gray-200 px-6">
-                    <button className="text-[#5170FF] font-bold text-[13px] py-4 border-b-2 border-[#5170FF] px-4 -mb-px">Semua (4)</button>
-                    <button className="text-gray-400 font-bold text-[13px] py-4 px-4 hover:text-gray-600">Tersedia (1)</button>
-                    <button className="text-gray-400 font-bold text-[13px] py-4 px-4 hover:text-gray-600">Diproses (1)</button>
-                    <button className="text-gray-400 font-bold text-[13px] py-4 px-4 hover:text-gray-600">Selesai (2)</button>
-                </div>
-
                 {/* Table */}
                 <table className="w-full text-left border-collapse">
                     <thead>
@@ -52,70 +82,38 @@ function DonorDashboard({ user }: { user: any }) {
                         </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-100">
-                        {/* Row 1 */}
-                        <tr className="hover:bg-gray-50">
-                            <td className="px-6 py-4 flex items-center gap-3">
-                                <div className="w-10 h-10 bg-gray-200 rounded shrink-0"></div>
-                                <span className="text-[12px] text-gray-700 font-medium">Sepatu</span>
-                            </td>
-                            <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">6 Juli 2026</td>
-                            <td className="px-6 py-4">
-                                <span className="inline-flex px-3 py-1 text-[11px] font-medium text-[#5170FF] border border-[#5170FF] rounded-md bg-[#F5F7FF]">Diproses</span>
-                            </td>
-                            <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">1 permintaan</td>
-                            <td className="px-6 py-4 text-right">
-                                <button className="text-gray-400 hover:text-gray-600"><MoreVertical className="w-5 h-5" /></button>
-                            </td>
-                        </tr>
-                        {/* Row 2 */}
-                        <tr className="hover:bg-gray-50">
-                            <td className="px-6 py-4 flex items-center gap-3">
-                                <div className="w-10 h-10 bg-gray-200 rounded shrink-0"></div>
-                                <span className="text-[12px] text-gray-700 font-medium">Tas</span>
-                            </td>
-                            <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">7 Juli 2026</td>
-                            <td className="px-6 py-4">
-                                <span className="inline-flex px-3 py-1 text-[11px] font-medium text-emerald-500 border border-emerald-500 rounded-md bg-emerald-50">Tersedia</span>
-                            </td>
-                            <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">1 permintaan</td>
-                            <td className="px-6 py-4 text-right">
-                                <button className="text-gray-400 hover:text-gray-600"><MoreVertical className="w-5 h-5" /></button>
-                            </td>
-                        </tr>
-                        {/* Row 3 */}
-                        <tr className="hover:bg-gray-50">
-                            <td className="px-6 py-4 flex items-center gap-3">
-                                <div className="w-10 h-10 bg-gray-200 rounded shrink-0"></div>
-                                <span className="text-[12px] text-gray-700 font-medium">Buku</span>
-                            </td>
-                            <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">3 Juli 2026</td>
-                            <td className="px-6 py-4">
-                                <span className="inline-flex px-3 py-1 text-[11px] font-medium text-emerald-500 border border-emerald-500 rounded-md bg-emerald-50">Selesai</span>
-                            </td>
-                            <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">0 permintaan</td>
-                            <td className="px-6 py-4 text-right">
-                                <button className="text-gray-400 hover:text-gray-600"><MoreVertical className="w-5 h-5" /></button>
-                            </td>
-                        </tr>
-                        {/* Row 4 */}
-                        <tr className="hover:bg-gray-50">
-                            <td className="px-6 py-4 flex items-center gap-3">
-                                <div className="w-10 h-10 bg-gray-200 rounded shrink-0"></div>
-                                <span className="text-[12px] text-gray-700 font-medium">Botol minum</span>
-                            </td>
-                            <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">1 Juli 2026</td>
-                            <td className="px-6 py-4">
-                                <span className="inline-flex px-3 py-1 text-[11px] font-medium text-emerald-500 border border-emerald-500 rounded-md bg-emerald-50">Selesai</span>
-                            </td>
-                            <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">0 permintaan</td>
-                            <td className="px-6 py-4 text-right">
-                                <button className="text-gray-400 hover:text-gray-600"><MoreVertical className="w-5 h-5" /></button>
-                            </td>
-                        </tr>
+                        {(!recentItems || recentItems.length === 0) ? (
+                            <tr>
+                                <td colSpan={5} className="py-12 text-center text-gray-500 text-[14px]">
+                                    Belum ada donasi.
+                                </td>
+                            </tr>
+                        ) : (
+                            recentItems.map((item) => (
+                                <tr key={item.id} className="hover:bg-gray-50">
+                                    <td className="px-6 py-4 flex items-center gap-3">
+                                        <div className="w-10 h-10 bg-gray-200 rounded shrink-0 overflow-hidden">
+                                            {getPrimaryImage(item.images) && (
+                                                <img src={getPrimaryImage(item.images)!} alt={item.title} className="w-full h-full object-cover" />
+                                            )}
+                                        </div>
+                                        <span className="text-[13px] text-gray-900 font-bold">{item.title}</span>
+                                    </td>
+                                    <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">{formatDate(item.created_at)}</td>
+                                    <td className="px-6 py-4">
+                                        {getStatusBadge(item.status)}
+                                    </td>
+                                    <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">{item.donation_requests_count} permintaan</td>
+                                    <td className="px-6 py-4 text-right">
+                                        <Link href={`/donations/${item.id}`} className="text-gray-400 hover:text-[#5170FF] transition-colors"><MoreVertical className="w-5 h-5" /></Link>
+                                    </td>
+                                </tr>
+                            ))
+                        )}
                     </tbody>
                 </table>
                 <div className="p-4 text-center border-t border-gray-100">
-                    <button className="text-[#5170FF] text-[13px] font-bold hover:underline">Lihat Semua Barang</button>
+                    <Link href="/donations" className="text-[#5170FF] text-[13px] font-bold hover:underline">Lihat Semua Barang</Link>
                 </div>
             </div>
         </div>
@@ -123,9 +121,9 @@ function DonorDashboard({ user }: { user: any }) {
 }
 
 // Recipient Dashboard Component
-function RecipientDashboard({ user }: { user: any }) {
+function RecipientDashboard({ user, stats, recentItems }: { user: any, stats: any[], recentItems: any[] }) {
     return (
-        <div className="p-8 min-w-full max-w-7xl flex gap-8">
+        <div className="p-8 min-w-full max-w-7xl flex gap-8 flex-col lg:flex-row">
             <div className="flex-1">
                 {/* Header */}
                 <div className="mb-8">
@@ -137,14 +135,17 @@ function RecipientDashboard({ user }: { user: any }) {
 
                 {/* Ringkasan */}
                 <h2 className="text-[20px] font-bold text-gray-900 mb-4">Ringkasan</h2>
-                <div className="grid grid-cols-4 gap-4 mb-8">
-                    {[1, 2, 3, 4].map((i) => (
-                        <div key={i} className="h-24 bg-white border border-gray-300 rounded-2xl"></div>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    {stats.map((stat, i) => (
+                        <div key={i} className={`h-24 bg-white border rounded-2xl flex flex-col justify-center px-6 ${stat.color.replace('bg-', 'bg-opacity-10 bg-')}`}>
+                            <div className="text-[28px] font-bold leading-none mb-1">{stat.value}</div>
+                            <div className="text-[12px] font-medium opacity-80">{stat.label}</div>
+                        </div>
                     ))}
                 </div>
 
                 {/* Permintaan Saya */}
-                <h2 className="text-[20px] font-bold text-gray-900 mb-4">Permintaan Saya</h2>
+                <h2 className="text-[20px] font-bold text-gray-900 mb-4">Permintaan Terkini</h2>
                 <div className="bg-white border border-gray-300 rounded-2xl overflow-hidden">
                     <table className="w-full text-left border-collapse">
                         <thead>
@@ -157,76 +158,44 @@ function RecipientDashboard({ user }: { user: any }) {
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-gray-100">
-                            {/* Row 1 */}
-                            <tr className="hover:bg-gray-50">
-                                <td className="px-6 py-4 flex items-center gap-3">
-                                    <div className="w-10 h-10 bg-gray-200 rounded flex-shrink-0"></div>
-                                    <span className="text-[12px] text-gray-700 font-medium">Sepatu</span>
-                                </td>
-                                <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">6 Juli 2026</td>
-                                <td className="px-6 py-4">
-                                    <span className="inline-flex px-3 py-1 text-[11px] font-medium text-amber-500 border border-amber-500 rounded-md bg-amber-50">Menunggu</span>
-                                </td>
-                                <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">Nathania Galuh</td>
-                                <td className="px-6 py-4 text-right">
-                                    <button className="text-gray-400 hover:text-gray-600"><MoreVertical className="w-5 h-5" /></button>
-                                </td>
-                            </tr>
-                            {/* Row 2 */}
-                            <tr className="hover:bg-gray-50">
-                                <td className="px-6 py-4 flex items-center gap-3">
-                                    <div className="w-10 h-10 bg-gray-200 rounded flex-shrink-0"></div>
-                                    <span className="text-[12px] text-gray-700 font-medium">Tas</span>
-                                </td>
-                                <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">7 Juli 2026</td>
-                                <td className="px-6 py-4">
-                                    <span className="inline-flex px-3 py-1 text-[11px] font-medium text-emerald-500 border border-emerald-500 rounded-md bg-emerald-50">Disetujui</span>
-                                </td>
-                                <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">Nathania Galuh</td>
-                                <td className="px-6 py-4 text-right">
-                                    <button className="text-gray-400 hover:text-gray-600"><MoreVertical className="w-5 h-5" /></button>
-                                </td>
-                            </tr>
-                            {/* Row 3 */}
-                            <tr className="hover:bg-gray-50">
-                                <td className="px-6 py-4 flex items-center gap-3">
-                                    <div className="w-10 h-10 bg-gray-200 rounded flex-shrink-0"></div>
-                                    <span className="text-[12px] text-gray-700 font-medium">Buku</span>
-                                </td>
-                                <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">3 Juli 2026</td>
-                                <td className="px-6 py-4">
-                                    <span className="inline-flex px-3 py-1 text-[11px] font-medium text-emerald-500 border border-emerald-500 rounded-md bg-emerald-50">Selesai</span>
-                                </td>
-                                <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">Nathania Galuh</td>
-                                <td className="px-6 py-4 text-right">
-                                    <button className="text-gray-400 hover:text-gray-600"><MoreVertical className="w-5 h-5" /></button>
-                                </td>
-                            </tr>
-                            {/* Row 4 */}
-                            <tr className="hover:bg-gray-50">
-                                <td className="px-6 py-4 flex items-center gap-3">
-                                    <div className="w-10 h-10 bg-gray-200 rounded flex-shrink-0"></div>
-                                    <span className="text-[12px] text-gray-700 font-medium">Botol minum</span>
-                                </td>
-                                <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">1 Juli 2026</td>
-                                <td className="px-6 py-4">
-                                    <span className="inline-flex px-3 py-1 text-[11px] font-medium text-red-500 border border-red-500 rounded-md bg-red-50">Ditolak</span>
-                                </td>
-                                <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">Nathania Galuh</td>
-                                <td className="px-6 py-4 text-right">
-                                    <button className="text-gray-400 hover:text-gray-600"><MoreVertical className="w-5 h-5" /></button>
-                                </td>
-                            </tr>
+                            {(!recentItems || recentItems.length === 0) ? (
+                                <tr>
+                                    <td colSpan={5} className="py-12 text-center text-gray-500 text-[14px]">
+                                        Belum ada permintaan.
+                                    </td>
+                                </tr>
+                            ) : (
+                                recentItems.map((item) => (
+                                    <tr key={item.id} className="hover:bg-gray-50">
+                                        <td className="px-6 py-4 flex items-center gap-3">
+                                            <div className="w-10 h-10 bg-gray-200 rounded shrink-0 overflow-hidden">
+                                                {getPrimaryImage(item.donation?.images) && (
+                                                    <img src={getPrimaryImage(item.donation.images)!} alt={item.donation?.title} className="w-full h-full object-cover" />
+                                                )}
+                                            </div>
+                                            <span className="text-[13px] text-gray-900 font-bold">{item.donation?.title}</span>
+                                        </td>
+                                        <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">{formatDate(item.created_at)}</td>
+                                        <td className="px-6 py-4">
+                                            {getStatusBadge(item.status)}
+                                        </td>
+                                        <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">{item.donation?.user?.name}</td>
+                                        <td className="px-6 py-4 text-right">
+                                            <Link href={`/requests`} className="text-gray-400 hover:text-[#5170FF] transition-colors"><MoreVertical className="w-5 h-5" /></Link>
+                                        </td>
+                                    </tr>
+                                ))
+                            )}
                         </tbody>
                     </table>
                     <div className="p-4 text-center border-t border-gray-100">
-                        <button className="text-[#5170FF] text-[13px] font-bold hover:underline">Lihat Semua Barang</button>
+                        <Link href="/requests" className="text-[#5170FF] text-[13px] font-bold hover:underline">Lihat Semua Permintaan</Link>
                     </div>
                 </div>
             </div>
             
             {/* Right Sidebar for Penerima */}
-            <div className="w-[300px] flex flex-col gap-4">
+            <div className="w-full lg:w-[300px] flex flex-col gap-4 shrink-0">
                 {/* Tips */}
                 <div className="bg-[#EEF2FF] rounded-2xl p-6 border border-[#E0E7FF]">
                     <h3 className="text-[#5170FF] font-bold text-[16px] mb-4">Tips Penerima</h3>
@@ -253,7 +222,8 @@ function RecipientDashboard({ user }: { user: any }) {
                 {/* Bantuan */}
                 <div className="bg-[#5170FF] rounded-2xl p-6 text-white shadow-md">
                     <h3 className="font-bold text-[18px] mb-1">Butuh Bantuan?</h3>
-                    <p className="text-[13px] opacity-90">Butuh Bantuan?</p>
+                    <p className="text-[13px] opacity-90 leading-relaxed mb-4">Jika Anda mengalami kendala saat mengajukan permintaan, hubungi tim support kami.</p>
+                    <button className="bg-white text-[#5170FF] text-[12px] font-bold py-2 px-4 rounded-lg w-full">Hubungi Support</button>
                 </div>
             </div>
         </div>
@@ -281,7 +251,7 @@ function AdminDashboard({ user }: { user: any }) {
     );
 }
 
-export default function Dashboard() {
+export default function Dashboard({ stats = [], recentItems = [] }: { stats?: any[], recentItems?: any[] }) {
     const { auth } = usePage<{ auth: Auth }>().props;
     const role = auth.user.role || 'donor';
 
@@ -289,8 +259,8 @@ export default function Dashboard() {
         <DashboardLayout>
             <Head title="Dashboard" />
             
-            {role === 'donor' && <DonorDashboard user={auth.user} />}
-            {role === 'recipient' && <RecipientDashboard user={auth.user} />}
+            {role === 'donor' && <DonorDashboard user={auth.user} stats={stats} recentItems={recentItems} />}
+            {role === 'recipient' && <RecipientDashboard user={auth.user} stats={stats} recentItems={recentItems} />}
             {role === 'admin' && <AdminDashboard user={auth.user} />}
         </DashboardLayout>
     );

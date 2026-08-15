@@ -29,7 +29,6 @@ export function RoleSidebar() {
             { name: 'Pesan Masuk', icon: MessageSquare, href: '/chats', active: url.startsWith('/chats'), badge: active_conversations_count || null },
             { name: 'Notifikasi', icon: Bell, href: '/notifications', active: url.startsWith('/notifications'), badge: unread_notifications_count || null },
             { name: 'Profil Saya', icon: UserIcon, href: '/settings/profile', active: url.startsWith('/settings/profile'), badge: null },
-            { name: 'Pengaturan', icon: Settings, href: '#', badge: null },
         ],
         recipient: [
             { name: 'Dashboard', icon: LayoutGrid, href: dashboard(), active: url === '/dashboard' },
@@ -39,7 +38,6 @@ export function RoleSidebar() {
             { name: 'Pesan Masuk', icon: MessageSquare, href: '/chats', active: url.startsWith('/chats'), badge: active_conversations_count || null },
             { name: 'Notifikasi', icon: Bell, href: '/user-notifications', active: url.startsWith('/user-notifications'), badge: unread_notifications_count || null },
             { name: 'Profil Saya', icon: UserIcon, href: '/settings/profile', active: url.startsWith('/settings/profile'), badge: null },
-            { name: 'Pengaturan', icon: Settings, href: '#', badge: null },
         ],
         admin: [
             { name: 'Dashboard', icon: LayoutGrid, href: dashboard(), active: url.startsWith('/dashboard') },
@@ -49,7 +47,6 @@ export function RoleSidebar() {
             { name: 'Pesan Masuk', icon: MessageSquare, href: '#', badge: null },
             { name: 'Notifikasi', icon: Bell, href: '#', badge: null },
             { name: 'Profil Saya', icon: UserIcon, href: '/settings/profile', active: url.startsWith('/settings/profile'), badge: null },
-            { name: 'Pengaturan', icon: Settings, href: '#', badge: null },
         ]
     };
 
