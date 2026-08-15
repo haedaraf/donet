@@ -12,7 +12,6 @@ storage/framework/sessions/*
 storage/framework/views/*
 
 tests
-docker
 *.md
 phpunit.xml
 phpstan.neon
