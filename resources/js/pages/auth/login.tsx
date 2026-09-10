@@ -6,6 +6,8 @@ import { register } from '@/routes';
 /* @end-chisel-registration */
 import { store } from '@/routes/login';
 import { request } from '@/routes/password';
+import donateImage from '../../../../storage/app/public/Donatelogo.png';
+
 
 type Props = {
     status?: string;
@@ -16,16 +18,16 @@ export default function Login({ status, canResetPassword }: Props) {
     const [showPassword, setShowPassword] = useState(false);
 
     return (
-        <div className="min-h-screen w-full flex items-center justify-center p-4 md:p-8 bg-[linear-gradient(243.43deg,#5170FF_13.62%,#BEC9FF_40.13%,#9FB0FF_65.01%,#5170FF_87.38%)]">
+        <div className="min-h-screen w-full flex items-center justify-center p-4 md:p-8 bg-[#EDF1FF]">
             <Head title="Log in" />
 
             <div className="bg-white rounded-[24px] p-8 w-full max-w-[460px] shadow-lg">
                 <div className="mb-6 text-center flex flex-col items-center">
                     <div className="mb-4">
-                        <svg width="32" height="40" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="20" y="0" width="12" height="40" rx="6" fill="#5170FF" />
-                            <path d="M20 16C13.3726 16 8 21.3726 8 28C8 34.6274 13.3726 40 20 40V16Z" fill="#5170FF" />
-                        </svg>
+                        <img 
+                            src={donateImage}
+                            alt="Logo"
+                            className="w-auto h-20 object-contain"/>
                     </div>
                     <h1 className="text-[20px] font-bold text-gray-900 mb-1">Login</h1>
                     <p className="text-[12px] text-gray-500">Masuk ke akun DoanteYours Anda</p>

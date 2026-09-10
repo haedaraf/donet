@@ -132,7 +132,7 @@ export default function ExploreShow({ donation, hasRequested }: { donation: any,
                                 auth.user.role === 'recipient' ? (
                                     <button 
                                         onClick={() => setShowModal(true)}
-                                        className="w-full bg-[#5170FF] hover:bg-[#405ce6] text-white py-4 rounded-xl font-bold text-[15px] transition-colors shadow-sm flex items-center justify-center gap-2"
+                                        className="w-full bg-primary hover:bg-primary-900 text-primary-foreground py-4 rounded-xl font-bold text-[15px] transition-colors shadow-md ring-2 ring-primary/20 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/40 flex items-center justify-center gap-2"
                                     >
                                         Ajukan Permintaan
                                     </button>
@@ -184,7 +184,7 @@ export default function ExploreShow({ donation, hasRequested }: { donation: any,
                                 <button
                                     type="submit"
                                     disabled={processing}
-                                    className="flex-1 py-3 bg-[#5170FF] hover:bg-[#405ce6] text-white rounded-xl font-bold text-[13px] transition-colors disabled:opacity-50"
+                                    className="flex-1 py-3 bg-primary hover:bg-primary-900 text-primary-foreground rounded-xl font-bold text-[13px] transition-colors shadow-sm ring-2 ring-primary/20 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/40 disabled:opacity-50"
                                 >
                                     {processing ? 'Mengirim...' : 'Kirim Permintaan'}
                                 </button>

@@ -58,14 +58,14 @@ export function RoleSidebar() {
     else if (role === 'admin') displayRole = 'Administrator';
 
     return (
-        <aside className="w-65 h-screen bg-white border-r border-gray-100 flex flex-col fixed top-0 left-0 overflow-y-auto">
+        <aside className="w-65 h-screen bg-[#535226] border-r border-[#41401E] text-white flex flex-col fixed top-0 left-0 overflow-y-auto shadow-xl">
             {/* Logo */}
             <div className="flex items-center gap-3 px-6 py-8">
                 <svg width="24" height="30" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect x="20" y="0" width="12" height="40" rx="6" fill="#5170FF" />
-                    <path d="M20 16C13.3726 16 8 21.3726 8 28C8 34.6274 13.3726 40 20 40V16Z" fill="#5170FF" />
+                    <rect x="20" y="0" width="12" height="40" rx="6" fill="#74732F" />
+                    <path d="M20 16C13.3726 16 8 21.3726 8 28C8 34.6274 13.3726 40 20 40V16Z" fill="#74732F" />
                 </svg>
-                <span className="font-bold text-[#5170FF] text-[15px] tracking-wide">Donate Yours</span>
+                <span className="font-bold text-[#F8F8DF] text-[15px] tracking-wide">Donate Yours</span>
             </div>
 
             {/* User Profile Snippet */}
@@ -96,7 +96,7 @@ export function RoleSidebar() {
                             href={item.href}
                             className={`flex items-center justify-between px-4 py-2.5 rounded-xl transition-colors ${
                                 isActive 
-                                ? 'bg-[#F2F4FF] text-[#5170FF]' 
+                                ? 'bg-[#F8F8DF] text-[#74732F]' 
                                 : 'text-gray-500 hover:bg-gray-50 hover:text-gray-900'
                             }`}
                         >

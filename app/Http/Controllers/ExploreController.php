@@ -51,12 +51,52 @@ class ExploreController extends Controller
         ]);
     }
 
+    public function publicCariBarang(Request $request)
+    {
+        $query = Donation::with(['images', 'category'])->where('status', 'published');
+
+        // Search by title
+        if ($request->has('search') && $request->search != '') {
+            $query->where('title', 'like', '%' . $request->search . '%');
+        }
+
+        // Filter by category
+        if ($request->has('category') && $request->category != '') {
+            $query->where('category_id', $request->category);
+        }
+
+        // Filter by condition
+        if ($request->has('condition') && $request->condition != '') {
+            $query->where('condition', $request->condition);
+        }
+
+        // Sort
+        if ($request->has('sort')) {
+            if ($request->sort == 'oldest') {
+                $query->oldest();
+            } else {
+                $query->latest();
+            }
+        } else {
+            $query->latest();
+        }
+
+        $donations = $query->paginate(12)->withQueryString();
+        $categories = Category::all();
+
+        return Inertia::render('CariBarang', [
+            'donations' => $donations,
+            'categories' => $categories,
+            'filters' => (object) $request->only(['search', 'category', 'condition', 'sort'])
+        ]);
+    }
+
     public function show($id)
     {
-        $donation = Donation::with(['images', 'category', 'user'])->findOrFail($id);
+        $donation = Donation::withTrashed()->with(['images', 'category', 'user'])->findOrFail($id);
         
-        // If not published, only the owner can view it
-        if ($donation->status !== 'published') {
+        // If not published or trashed, only the owner can view it
+        if ($donation->status !== 'published' || $donation->trashed()) {
             if (!Auth::check() || Auth::id() !== $donation->user_id) {
                 abort(404);
             }

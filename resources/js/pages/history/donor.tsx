@@ -34,9 +34,16 @@ export default function DonorHistory({ histories, totalDonations }: { histories:
             case 'rejected':
                 return <span className="px-3 py-1 bg-red-50 text-red-600 border border-red-200 rounded-lg text-[12px] font-medium">Ditolak</span>;
             case 'pending':
+            case 'requested':
                 return <span className="px-3 py-1 bg-gray-50 text-gray-600 border border-gray-200 rounded-lg text-[12px] font-medium">Menunggu</span>;
             case 'cancelled':
-                return <span className="px-3 py-1 bg-gray-100 text-gray-500 border border-gray-300 rounded-lg text-[12px] font-medium">Diambil</span>;
+                return <span className="px-3 py-1 bg-gray-100 text-gray-500 border border-gray-300 rounded-lg text-[12px] font-medium">Dibatalkan</span>;
+            case 'deleted':
+                return <span className="px-3 py-1 bg-red-50 text-red-600 border border-red-200 rounded-lg text-[12px] font-medium">Dihapus</span>;
+            case 'published':
+                return <span className="px-3 py-1 bg-blue-50 text-blue-600 border border-blue-200 rounded-lg text-[12px] font-medium">Dipublikasi</span>;
+            case 'draft':
+                return <span className="px-3 py-1 bg-gray-50 text-gray-600 border border-gray-200 rounded-lg text-[12px] font-medium">Draft</span>;
             default:
                 return <span className="px-3 py-1 bg-gray-50 text-gray-600 border border-gray-200 rounded-lg text-[12px] font-medium">{status}</span>;
         }
@@ -75,45 +82,45 @@ export default function DonorHistory({ histories, totalDonations }: { histories:
                                             </td>
                                         </tr>
                                     ) : (
-                                        histories.data.map((history: any) => (
-                                            <tr key={history.id} className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                                                <td className="py-4 px-6">
-                                                    <div className="w-16 h-16 rounded-xl bg-gray-100 overflow-hidden">
-                                                        {getPrimaryImage(history.donation?.images) && (
-                                                            <img src={getPrimaryImage(history.donation.images)!} alt="Donation" className="w-full h-full object-cover" />
-                                                        )}
-                                                    </div>
-                                                </td>
-                                                <td className="py-4 px-6">
-                                                    <h3 className="text-[14px] font-bold text-gray-900 mb-1">{history.donation?.title}</h3>
-                                                    <p className="text-[12px] text-gray-500">Kategori: {history.donation?.category?.name || 'Lainnya'}</p>
-                                                </td>
-                                                <td className="py-4 px-6">
-                                                    <h3 className="text-[14px] font-bold text-gray-900 mb-1">{history.recipient?.name}</h3>
-                                                    <p className="text-[12px] text-gray-500">{history.donation?.city || 'Tidak diketahui'}</p>
-                                                </td>
-                                                <td className="py-4 px-6">
-                                                    <h3 className="text-[13px] text-gray-900 mb-1">{formatDate(history.updated_at)}</h3>
-                                                    <p className="text-[12px] text-gray-500">{formatTime(history.updated_at)}</p>
-                                                </td>
-                                                <td className="py-4 px-6">
-                                                    {getStatusBadge(history.status)}
-                                                </td>
-                                                <td className="py-4 px-6">
-                                                    <div className="flex items-center justify-center gap-3">
-                                                        <Link href={`/donations/${history.donation_id}`} className="text-[#5170FF] hover:text-blue-700 transition-colors">
-                                                            <Eye className="w-4.5 h-4.5" />
-                                                        </Link>
-                                                        <button className="text-[#5170FF] hover:text-blue-700 transition-colors">
-                                                            <Edit2 className="w-4.5 h-4.5" />
-                                                        </button>
-                                                        <button className="text-red-500 hover:text-red-700 transition-colors">
-                                                            <Trash2 className="w-4.5 h-4.5" />
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        ))
+                                        histories.data.map((history: any) => {
+                                            const activeRequest = history.donation_requests?.find((r: any) => ['approved', 'completed', 'picked_up'].includes(r.status));
+                                            const recipientName = activeRequest?.recipient?.name || '-';
+                                            const displayStatus = history.deleted_at ? 'deleted' : history.status;
+
+                                            return (
+                                                <tr key={history.id} className={`border-b border-gray-100 hover:bg-gray-50 transition-colors ${history.deleted_at ? 'opacity-75' : ''}`}>
+                                                    <td className="py-4 px-6">
+                                                        <div className="w-16 h-16 rounded-xl bg-gray-100 overflow-hidden">
+                                                            {getPrimaryImage(history.images) && (
+                                                                <img src={getPrimaryImage(history.images)!} alt="Donation" className="w-full h-full object-cover" />
+                                                            )}
+                                                        </div>
+                                                    </td>
+                                                    <td className="py-4 px-6">
+                                                        <h3 className="text-[14px] font-bold text-gray-900 mb-1">{history.title}</h3>
+                                                        <p className="text-[12px] text-gray-500">Kategori: {history.category?.name || 'Lainnya'}</p>
+                                                    </td>
+                                                    <td className="py-4 px-6">
+                                                        <h3 className="text-[14px] font-bold text-gray-900 mb-1">{recipientName}</h3>
+                                                        <p className="text-[12px] text-gray-500">{history.city || 'Tidak diketahui'}</p>
+                                                    </td>
+                                                    <td className="py-4 px-6">
+                                                        <h3 className="text-[13px] text-gray-900 mb-1">{formatDate(history.updated_at)}</h3>
+                                                        <p className="text-[12px] text-gray-500">{formatTime(history.updated_at)}</p>
+                                                    </td>
+                                                    <td className="py-4 px-6">
+                                                        {getStatusBadge(displayStatus)}
+                                                    </td>
+                                                    <td className="py-4 px-6">
+                                                        <div className="flex items-center justify-center gap-3">
+                                                            <Link href={`/donations/${history.id}`} className="text-[#5170FF] hover:text-blue-700 transition-colors">
+                                                                <Eye className="w-4.5 h-4.5" />
+                                                            </Link>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            );
+                                        })
                                     )}
                                 </tbody>
                             </table>

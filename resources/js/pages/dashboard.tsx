@@ -22,7 +22,7 @@ const getStatusBadge = (status: string) => {
         case 'completed':
             return <span className="inline-flex px-3 py-1 text-[11px] font-medium text-emerald-500 border border-emerald-500 rounded-md bg-emerald-50">Selesai</span>;
         case 'approved':
-            return <span className="inline-flex px-3 py-1 text-[11px] font-medium text-[#5170FF] border border-[#5170FF] rounded-md bg-[#F5F7FF]">Diproses</span>;
+            return <span className="inline-flex px-3 py-1 text-[11px] font-medium text-[#74732F] border border-[#74732F] rounded-md bg-[#F8F8DF]">Diproses</span>;
         case 'rejected':
             return <span className="inline-flex px-3 py-1 text-[11px] font-medium text-red-500 border border-red-500 rounded-md bg-red-50">Ditolak</span>;
         case 'cancelled':
@@ -50,7 +50,7 @@ function DonorDashboard({ user, stats, recentItems }: { user: any, stats: any[],
                     </h1>
                     <p className="text-[15px] font-semibold text-gray-900 mt-1">Terima kasih telah berbagi kebaikan hari ini.</p>
                 </div>
-                <Link href="/donations/create" className="bg-[#5170FF] hover:bg-[#405ce6] text-white px-6 py-2.5 rounded-lg font-bold text-[13px] flex items-center gap-2 transition-colors shadow-sm">
+                <Link href="/donations/create" className="bg-[#A84E61] hover:bg-[#7A3544] text-white px-6 py-2.5 shadow-md ring-2 ring-[#FFBAC6]/60 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#FFBAC6] rounded-lg font-bold text-[13px] flex items-center gap-2 transition-colors shadow-sm">
                     <Plus className="w-4 h-4" strokeWidth={3} />
                     Donasikan Barang
                 </Link>
@@ -105,7 +105,7 @@ function DonorDashboard({ user, stats, recentItems }: { user: any, stats: any[],
                                     </td>
                                     <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">{item.donation_requests_count} permintaan</td>
                                     <td className="px-6 py-4 text-right">
-                                        <Link href={`/donations/${item.id}`} className="text-gray-400 hover:text-[#5170FF] transition-colors"><MoreVertical className="w-5 h-5" /></Link>
+                                        <Link href={`/donations/${item.id}`} className="text-gray-400 hover:text-[#74732F] transition-colors"><MoreVertical className="w-5 h-5" /></Link>
                                     </td>
                                 </tr>
                             ))
@@ -113,7 +113,7 @@ function DonorDashboard({ user, stats, recentItems }: { user: any, stats: any[],
                     </tbody>
                 </table>
                 <div className="p-4 text-center border-t border-gray-100">
-                    <Link href="/donations" className="text-[#5170FF] text-[13px] font-bold hover:underline">Lihat Semua Barang</Link>
+                    <Link href="/donations" className="text-[#74732F] text-[13px] font-bold hover:underline">Lihat Semua Barang</Link>
                 </div>
             </div>
         </div>
@@ -181,7 +181,7 @@ function RecipientDashboard({ user, stats, recentItems }: { user: any, stats: an
                                         </td>
                                         <td className="px-6 py-4 text-[12px] text-gray-700 font-medium">{item.donation?.user?.name}</td>
                                         <td className="px-6 py-4 text-right">
-                                            <Link href={`/requests`} className="text-gray-400 hover:text-[#5170FF] transition-colors"><MoreVertical className="w-5 h-5" /></Link>
+                                            <Link href={`/requests`} className="text-gray-400 hover:text-[#74732F] transition-colors"><MoreVertical className="w-5 h-5" /></Link>
                                         </td>
                                     </tr>
                                 ))
@@ -189,7 +189,7 @@ function RecipientDashboard({ user, stats, recentItems }: { user: any, stats: an
                         </tbody>
                     </table>
                     <div className="p-4 text-center border-t border-gray-100">
-                        <Link href="/requests" className="text-[#5170FF] text-[13px] font-bold hover:underline">Lihat Semua Permintaan</Link>
+                        <Link href="/requests" className="text-[#74732F] text-[13px] font-bold hover:underline">Lihat Semua Permintaan</Link>
                     </div>
                 </div>
             </div>
@@ -197,33 +197,33 @@ function RecipientDashboard({ user, stats, recentItems }: { user: any, stats: an
             {/* Right Sidebar for Penerima */}
             <div className="w-full lg:w-[300px] flex flex-col gap-4 shrink-0">
                 {/* Tips */}
-                <div className="bg-[#EEF2FF] rounded-2xl p-6 border border-[#E0E7FF]">
-                    <h3 className="text-[#5170FF] font-bold text-[16px] mb-4">Tips Penerima</h3>
+                <div className="bg-[#F8F8DF] rounded-2xl p-6 border border-[#E5E3A7]">
+                    <h3 className="text-[#74732F] font-bold text-[16px] mb-4">Tips Penerima</h3>
                     <ul className="flex flex-col gap-4">
                         <li className="flex gap-3 text-[12px] font-medium text-gray-900 leading-tight">
-                            <Circle className="w-[18px] h-[18px] text-[#5170FF] flex-shrink-0" strokeWidth={1} />
+                            <Circle className="w-[18px] h-[18px] text-[#74732F] flex-shrink-0" strokeWidth={1} />
                             <span>Lengkapi profil anda agar donatur lebih percaya</span>
                         </li>
                         <li className="flex gap-3 text-[12px] font-medium text-gray-900 leading-tight">
-                            <Circle className="w-[18px] h-[18px] text-[#5170FF] flex-shrink-0" strokeWidth={1} />
+                            <Circle className="w-[18px] h-[18px] text-[#74732F] flex-shrink-0" strokeWidth={1} />
                             <span>Ajukan permintaan secara sopan dan jelas</span>
                         </li>
                         <li className="flex gap-3 text-[12px] font-medium text-gray-900 leading-tight">
-                            <Circle className="w-[18px] h-[18px] text-[#5170FF] flex-shrink-0" strokeWidth={1} />
+                            <Circle className="w-[18px] h-[18px] text-[#74732F] flex-shrink-0" strokeWidth={1} />
                             <span>Ambil barang sesuai kesepakatan</span>
                         </li>
                         <li className="flex gap-3 text-[12px] font-medium text-gray-900 leading-tight">
-                            <Circle className="w-[18px] h-[18px] text-[#5170FF] flex-shrink-0" strokeWidth={1} />
+                            <Circle className="w-[18px] h-[18px] text-[#74732F] flex-shrink-0" strokeWidth={1} />
                             <span>Tidak untuk diperjualbelikan kembali</span>
                         </li>
                     </ul>
                 </div>
                 
                 {/* Bantuan */}
-                <div className="bg-[#5170FF] rounded-2xl p-6 text-white shadow-md">
+                <div className="bg-[#BEBB5E] rounded-2xl p-6 text-white shadow-md">
                     <h3 className="font-bold text-[18px] mb-1">Butuh Bantuan?</h3>
                     <p className="text-[13px] opacity-90 leading-relaxed mb-4">Jika Anda mengalami kendala saat mengajukan permintaan, hubungi tim support kami.</p>
-                    <button className="bg-white text-[#5170FF] text-[12px] font-bold py-2 px-4 rounded-lg w-full">Hubungi Support</button>
+                    <button className="bg-white text-[#74732F] text-[12px] font-bold py-2 px-4 rounded-lg w-full">Hubungi Support</button>
                 </div>
             </div>
         </div>

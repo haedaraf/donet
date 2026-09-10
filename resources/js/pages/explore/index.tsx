@@ -1,7 +1,7 @@
 import { Head, Link, router } from '@inertiajs/react';
 import DashboardLayout from '@/layouts/dashboard-layout';
 import { Search, MapPin, Calendar, CheckCircle2 } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function Explore({ donations, categories = [], filters = {} }: { donations: any, categories: any[], filters: any }) {
     const safeFilters = Array.isArray(filters) ? {} : (filters || {});
@@ -9,6 +9,27 @@ export default function Explore({ donations, categories = [], filters = {} }: { 
     const [category, setCategory] = useState(typeof safeFilters.category === 'string' ? safeFilters.category : '');
     const [condition, setCondition] = useState(typeof safeFilters.condition === 'string' ? safeFilters.condition : '');
     const [sort, setSort] = useState(typeof safeFilters.sort === 'string' ? safeFilters.sort : 'latest');
+
+    const initialRender = useRef(true);
+
+    useEffect(() => {
+        if (initialRender.current) {
+            initialRender.current = false;
+            return;
+        }
+
+        const timeoutId = setTimeout(() => {
+            const params: any = {};
+            if (search) params.search = search;
+            if (category) params.category = category;
+            if (condition) params.condition = condition;
+            if (sort && sort !== 'latest') params.sort = sort;
+
+            router.get('/explore', params, { preserveState: true, replace: true });
+        }, 300);
+
+        return () => clearTimeout(timeoutId);
+    }, [search]);
 
     const handleSearch = (e?: React.FormEvent) => {
         if (e) e.preventDefault();

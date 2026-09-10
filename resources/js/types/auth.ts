@@ -6,7 +6,6 @@ export type User = {
     email_verified_at: string | null;
     role: 'donor' | 'recipient' | 'admin';
     phone: string | null;
-    avatar?: string;
     /* @chisel-2fa */
     two_factor_enabled?: boolean;
     /* @end-chisel-2fa */

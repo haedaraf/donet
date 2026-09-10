@@ -1,0 +1,475 @@
+<mxfile host="app.diagrams.net" agent="DonateYours DFD Generator" pages="4">
+  <diagram id="F9M2S3ufKZfOQBsm9iRg" name="dfd lvl 0">
+    <mxGraphModel dx="968" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="diCW1YXPLap7G7ciN82t-1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;" value="&lt;h1 style=&quot;font-size: 22px; margin: 0px; color: rgb(13, 71, 161);&quot;&gt;DFD LEVEL 0&lt;/h1&gt;" vertex="1">
+          <mxGeometry height="55" width="180" x="70" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="R-CZl7wXrVeJ2louENWT-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=light-dark(#001DBC,#007FFF);" value="&lt;b&gt;SISTEM INFORMASI DONATE YOURS&lt;/b&gt;" vertex="1">
+          <mxGeometry height="180" width="160" x="345" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="R-CZl7wXrVeJ2louENWT-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Penerima" vertex="1">
+          <mxGeometry height="40" width="120" x="570" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="R-CZl7wXrVeJ2louENWT-4" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=3;" target="R-CZl7wXrVeJ2louENWT-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="250" />
+            </Array>
+            <mxPoint x="430" y="370" as="sourcePoint" />
+            <mxPoint x="480" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R-CZl7wXrVeJ2louENWT-6" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.99;entryY=0.611;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=3;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="386.22" />
+            </Array>
+            <mxPoint x="640" y="272.04" as="sourcePoint" />
+            <mxPoint x="503.4" y="386.2199999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A-P3EzOfy32Nj6tx5u1r-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Donatur" vertex="1">
+          <mxGeometry height="40" width="120" x="110" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="A-P3EzOfy32Nj6tx5u1r-3" edge="1" parent="1" source="A-P3EzOfy32Nj6tx5u1r-1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;strokeWidth=3;" target="R-CZl7wXrVeJ2louENWT-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="460" />
+            </Array>
+            <mxPoint x="150" y="620" as="sourcePoint" />
+            <mxPoint x="200" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A-P3EzOfy32Nj6tx5u1r-4" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=3;" target="A-P3EzOfy32Nj6tx5u1r-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="680" />
+            </Array>
+            <mxPoint x="420" y="550" as="sourcePoint" />
+            <mxPoint x="470" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A-P3EzOfy32Nj6tx5u1r-6" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: light-dark(rgb(27, 29, 30), rgb(211, 213, 214)); color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;Status publikasi barang donasi&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="110" x="280" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="A-P3EzOfy32Nj6tx5u1r-8" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: light-dark(rgb(27, 29, 30), rgb(211, 213, 214)); color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;Pengisian daftar barang&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="110" x="200" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="A-P3EzOfy32Nj6tx5u1r-9" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: light-dark(rgb(27, 29, 30), rgb(211, 213, 214)); color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;Pengajuan permintaan barang&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="110" x="520" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="A-P3EzOfy32Nj6tx5u1r-10" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: light-dark(rgb(27, 29, 30), rgb(211, 213, 214)); color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;Persetujuan atau penolakan pengajuan&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="120" x="440" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="9H_vJkSy2Uijt_RIdAub-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Donatur" vertex="1">
+          <mxGeometry height="20" width="120" x="650" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="9H_vJkSy2Uijt_RIdAub-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Penerima" vertex="1">
+          <mxGeometry height="20" width="120" x="650" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="9H_vJkSy2Uijt_RIdAub-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Transaksi" vertex="1">
+          <mxGeometry height="20" width="120" x="650" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="9H_vJkSy2Uijt_RIdAub-4" edge="1" parent="1" source="R-CZl7wXrVeJ2louENWT-1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.985;exitY=0.389;exitDx=0;exitDy=0;exitPerimeter=0;" target="9H_vJkSy2Uijt_RIdAub-2" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="550" y="460" as="sourcePoint" />
+            <mxPoint x="620" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9H_vJkSy2Uijt_RIdAub-5" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.985;exitY=0.389;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="505" y="489.63" as="sourcePoint" />
+            <mxPoint x="652" y="489.63" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9H_vJkSy2Uijt_RIdAub-6" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.985;exitY=0.389;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="503" y="539.63" as="sourcePoint" />
+            <mxPoint x="650" y="539.63" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9H_vJkSy2Uijt_RIdAub-7" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: light-dark(rgb(27, 29, 30), rgb(211, 213, 214)); color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;Data penerima&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="110" x="523" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="9H_vJkSy2Uijt_RIdAub-8" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: light-dark(rgb(27, 29, 30), rgb(211, 213, 214)); color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;Data donatur&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="110" x="523" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="9H_vJkSy2Uijt_RIdAub-9" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: light-dark(rgb(27, 29, 30), rgb(211, 213, 214)); color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;Ajukan permintaan&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="110" x="520" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="9H_vJkSy2Uijt_RIdAub-10" parent="1" style="text;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: light-dark(rgb(27, 29, 30), rgb(211, 213, 214)); color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18));&quot;&gt;Permintan disetujui atau ditolak&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="110" x="520" y="540" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page_dfd_lvl1" name="1. DFD Level 1 - Sistem Lengkap">
+    <mxGraphModel dx="968" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3000" pageHeight="2400" background="light-dark(#ffffff, #121212)" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title_lvl1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;" value="&lt;h1 style=&#39;font-size:22px;margin:0;color:#0d47a1;&#39;&gt;DATA FLOW DIAGRAM (DFD) LEVEL 1 - DONATEYOURS&lt;/h1&gt;&lt;p style=&#39;font-size:12px;color:#546e7a;margin:3px 0 0 0;&#39;&gt;Diagram Alir Data Level 1: Dekomposisi Sistem, Entitas Luar, Proses Utama &amp; Data Store&lt;/p&gt;" vertex="1">
+          <mxGeometry height="55" width="1100" x="60" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_bg_lvl1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b0bec5;strokeWidth=1.5;shadow=1;" vertex="1">
+          <mxGeometry height="70" width="960" x="60" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_ent_1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=13;fontFamily=Helvetica;fillColor=#e8f5e9;strokeColor=#2e7d32;fontColor=#1b5e20;strokeWidth=2;shadow=1;" value="Entitas Luar" vertex="1">
+          <mxGeometry height="40" width="110" x="80" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_proc_1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontColor=#0d47a1;strokeWidth=2;fontStyle=1;fontSize=12;shadow=1;arcSize=18;" value="1.0 Proses" vertex="1">
+          <mxGeometry height="40" width="110" x="210" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_ds_1" parent="1" style="shape=partialRectangle;top=0;bottom=0;fillColor=#fffde7;strokeColor=#fbc02d;fontColor=#f57f17;strokeWidth=2;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;shadow=1;" value="D1 Data Store" vertex="1">
+          <mxGeometry height="40" width="120" x="340" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_flow_in" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;" value="&lt;span style=&#39;color:#0d47a1;&#39;&gt;➔ Aliran Input&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="120" x="480" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_flow_out" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;" value="&lt;span style=&#39;color:#1b5e20;&#39;&gt;➔ Aliran Output&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="130" x="610" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_flow_ds" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;" value="&lt;span style=&#39;color:#e65100;&#39;&gt;➔ Baca/Tulis Data Store&lt;/span&gt;" vertex="1">
+          <mxGeometry height="40" width="180" x="750" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_donor" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=13;fontFamily=Helvetica;fillColor=#e8f5e9;strokeColor=#2e7d32;fontColor=#1b5e20;strokeWidth=2;shadow=1;" value="&lt;b style=&quot;font-size:14px;&quot;&gt;DONOR&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:11px;&quot;&gt;(Pemberi Donasi)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="75" width="170" x="100" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_rec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=13;fontFamily=Helvetica;fillColor=#fff3e0;strokeColor=#ef6c00;fontColor=#e65100;strokeWidth=2;shadow=1;" value="&lt;b style=&#39;font-size:14px;&#39;&gt;RECIPIENT&lt;/b&gt;&lt;br&gt;&lt;span style=&#39;font-size:11px;&#39;&gt;(Penerima / Yayasan)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="75" width="180" x="2650" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontColor=#0d47a1;strokeWidth=2;fontStyle=1;fontSize=12;shadow=1;arcSize=18;" value="&lt;b style=&#39;font-size:13px;&#39;&gt;1.0&lt;/b&gt;&lt;br&gt;&lt;b style=&#39;font-size:12px;&#39;&gt;Autentikasi &amp; Manajemen Pengguna&lt;/b&gt;" vertex="1">
+          <mxGeometry height="85" width="240" x="560" y="328" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontColor=#0d47a1;strokeWidth=2;fontStyle=1;fontSize=12;shadow=1;arcSize=18;" value="&lt;b style=&#39;font-size:13px;&#39;&gt;3.0&lt;/b&gt;&lt;br&gt;&lt;b style=&#39;font-size:12px;&#39;&gt;Pengajuan &amp; Verifikasi Permohonan&lt;/b&gt;" vertex="1">
+          <mxGeometry height="85" width="250" x="2040" y="875" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontColor=#0d47a1;strokeWidth=2;fontStyle=1;fontSize=12;shadow=1;arcSize=18;" value="&lt;b style=&#39;font-size:13px;&#39;&gt;4.0&lt;/b&gt;&lt;br&gt;&lt;b style=&#39;font-size:12px;&#39;&gt;Serah Terima &amp; Pencatatan Riwayat&lt;/b&gt;" vertex="1">
+          <mxGeometry height="85" width="250" x="1350" y="1350" as="geometry" />
+        </mxCell>
+        <mxCell id="p6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontColor=#0d47a1;strokeWidth=2;fontStyle=1;fontSize=12;shadow=1;arcSize=18;" value="&lt;b style=&#39;font-size:13px;&#39;&gt;6.0&lt;/b&gt;&lt;br&gt;&lt;b style=&#39;font-size:12px;&#39;&gt;Notifikasi &amp; Audit Log Aktivitas&lt;/b&gt;" vertex="1">
+          <mxGeometry height="85" width="240" x="2060" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_users" parent="1" style="shape=partialRectangle;top=0;bottom=0;fillColor=#fffde7;strokeColor=#fbc02d;fontColor=#f57f17;strokeWidth=2;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;shadow=1;" value="&lt;b&gt;D1&lt;/b&gt; | Tabel Users &amp; Passkeys" vertex="1">
+          <mxGeometry height="45" width="220" x="990" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_profiles" parent="1" style="shape=partialRectangle;top=0;bottom=0;fillColor=#fffde7;strokeColor=#fbc02d;fontColor=#f57f17;strokeWidth=2;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;shadow=1;" value="&lt;b&gt;D2&lt;/b&gt; | Tabel Profil Penerima" vertex="1">
+          <mxGeometry height="45" width="220" x="1020" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_categories" parent="1" style="shape=partialRectangle;top=0;bottom=0;fillColor=#fffde7;strokeColor=#fbc02d;fontColor=#f57f17;strokeWidth=2;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;shadow=1;" value="&lt;b&gt;D3&lt;/b&gt; | Tabel Kategori" vertex="1">
+          <mxGeometry height="45" width="220" x="750" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_donations" parent="1" style="shape=partialRectangle;top=0;bottom=0;fillColor=#fffde7;strokeColor=#fbc02d;fontColor=#f57f17;strokeWidth=2;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;shadow=1;" value="&lt;b&gt;D4&lt;/b&gt; | Tabel Donasi &amp; Foto" vertex="1">
+          <mxGeometry height="45" width="220" x="1000" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_requests" parent="1" style="shape=partialRectangle;top=0;bottom=0;fillColor=#fffde7;strokeColor=#fbc02d;fontColor=#f57f17;strokeWidth=2;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;shadow=1;" value="&lt;b&gt;D5&lt;/b&gt; | Tabel Pengajuan &amp; Log" vertex="1">
+          <mxGeometry height="45" width="230" x="1680" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_history" parent="1" style="shape=partialRectangle;top=0;bottom=0;fillColor=#fffde7;strokeColor=#fbc02d;fontColor=#f57f17;strokeWidth=2;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;shadow=1;" value="&lt;b&gt;D6&lt;/b&gt; | Tabel Riwayat Donasi" vertex="1">
+          <mxGeometry height="45" width="220" x="1365" y="1550" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_chats" parent="1" style="shape=partialRectangle;top=0;bottom=0;fillColor=#fffde7;strokeColor=#fbc02d;fontColor=#f57f17;strokeWidth=2;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;shadow=1;" value="&lt;b&gt;D7&lt;/b&gt; | Tabel Percakapan &amp; Pesan" vertex="1">
+          <mxGeometry height="45" width="220" x="1360" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_notifs" parent="1" style="shape=partialRectangle;top=0;bottom=0;fillColor=#fffde7;strokeColor=#fbc02d;fontColor=#f57f17;strokeWidth=2;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;shadow=1;" value="&lt;b&gt;D8&lt;/b&gt; | Tabel Notifikasi" vertex="1">
+          <mxGeometry height="45" width="220" x="1680" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_logs" parent="1" style="shape=partialRectangle;top=0;bottom=0;fillColor=#fffde7;strokeColor=#fbc02d;fontColor=#f57f17;strokeWidth=2;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;shadow=1;" value="&lt;b&gt;D9&lt;/b&gt; | Tabel Log Aktivitas" vertex="1">
+          <mxGeometry height="45" width="220" x="1680" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="f_d_p1_in" edge="1" parent="1" source="ent_donor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1976d2;strokeWidth=1.6;fontSize=10;fontColor=#0d47a1;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#90caf9;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="p1" value="Data Registrasi &amp; Kredensial">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_p1_d_out" edge="1" parent="1" source="p1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=1.6;fontSize=10;fontColor=#1b5e20;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#a5d6a7;exitX=0.2;exitY=1;exitDx=0;exitDy=0;entryX=0.7;entryY=0;entryDx=0;entryDy=0;" target="ent_donor" value="Status Akun &amp; Sesi Login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_r_p1_in" edge="1" parent="1" source="ent_rec" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1976d2;strokeWidth=1.6;fontSize=10;fontColor=#0d47a1;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#90caf9;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.2;entryDx=0;entryDy=0;" target="p1" value="Data Akun &amp; Profil Organisasi">
+          <mxGeometry relative="1" x="-0.2276" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_p1_r_out" edge="1" parent="1" source="p1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=1.6;fontSize=10;fontColor=#1b5e20;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#a5d6a7;exitX=0.9;exitY=0;exitDx=0;exitDy=0;entryX=0.7;entryY=0;entryDx=0;entryDy=0;" target="ent_rec" value="Status Akun &amp; Profil Tersimpan">
+          <mxGeometry relative="1" x="0.2054" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_p1_ds_u" edge="1" parent="1" source="p1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ds_users" value="Simpan/Validasi User">
+          <mxGeometry relative="1" x="0.4118" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_p1_ds_prof" edge="1" parent="1" source="p1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=1;exitY=0.7;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ds_profiles" value="Simpan Profil Organisasi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_d_p2_in" edge="1" parent="1" source="ent_donor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1976d2;strokeWidth=1.6;fontSize=10;fontColor=#0d47a1;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#90caf9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="p2" value="Postingan Donasi &amp; Foto">
+          <mxGeometry relative="1" x="0.069" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="270" y="850" />
+              <mxPoint x="430" y="850" />
+              <mxPoint x="430" y="952.48" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_p2_d_out" edge="1" parent="1" source="p2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=1.6;fontSize=10;fontColor=#1b5e20;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#a5d6a7;exitX=0;exitY=0.8;exitDx=0;exitDy=0;entryX=0.9;entryY=1;entryDx=0;entryDy=0;" target="ent_donor" value="Status Donasi Terpublikasi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_p2_r_out" edge="1" parent="1" source="p2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=1.6;fontSize=10;fontColor=#1b5e20;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#a5d6a7;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.3;entryY=1;entryDx=0;entryDy=0;" target="ent_rec" value="Katalog Barang Donasi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_p2_ds_don" edge="1" parent="1" source="p2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ds_donations" value="Simpan Data Donasi &amp; Foto">
+          <mxGeometry relative="1" x="0.2432" y="-35" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_ds_cat_p2" edge="1" parent="1" source="ds_categories" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="p2" value="Data Master Kategori">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_r_p3_in" edge="1" parent="1" source="ent_rec" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1976d2;strokeWidth=1.6;fontSize=10;fontColor=#0d47a1;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#90caf9;exitX=0;exitY=0.4;exitDx=0;exitDy=0;entryX=1;entryY=0.4;entryDx=0;entryDy=0;" target="p3" value="Pengajuan Permohonan Donasi">
+          <mxGeometry relative="1" x="0.5444" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_p3_r_out" edge="1" parent="1" source="p3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=1.6;fontSize=10;fontColor=#1b5e20;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#a5d6a7;exitX=1;exitY=0.8;exitDx=0;exitDy=0;entryX=0;entryY=0.8;entryDx=0;entryDy=0;" target="ent_rec" value="Status Permohonan (Pending/Approved)">
+          <mxGeometry relative="1" x="-0.2324" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="2489.97" y="943" />
+              <mxPoint x="2489.97" y="860.03" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_d_p3_in" edge="1" parent="1" source="ent_donor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1976d2;strokeWidth=1.6;fontSize=10;fontColor=#0d47a1;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#90caf9;exitX=0.8;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.9;entryDx=0;entryDy=0;" target="p3" value="Persetujuan / Penolakan Donor">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="236.04" y="940" />
+              <mxPoint x="2040.04" y="940" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_p3_d_out" edge="1" parent="1" source="p3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=1.6;fontSize=10;fontColor=#1b5e20;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#a5d6a7;exitX=0.2;exitY=0;exitDx=0;exitDy=0;entryX=0.9;entryY=0.3;entryDx=0;entryDy=0;" target="ent_donor" value="Notifikasi Pengajuan Masuk">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_p3_ds_req" edge="1" parent="1" source="p3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=0;exitY=0.3;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="ds_requests" value="Simpan Pengajuan &amp; Log Status">
+          <mxGeometry relative="1" x="0.192" y="-25" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_p3_ds_don" edge="1" parent="1" source="p3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=0;exitY=0.7;exitDx=0;exitDy=0;entryX=1;entryY=0.8;entryDx=0;entryDy=0;" target="ds_donations" value="Update Status Donasi (Requested/Approved)">
+          <mxGeometry relative="1" x="0.2027" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_d_p4_in" edge="1" parent="1" source="ent_donor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1976d2;strokeWidth=1.6;fontSize=10;fontColor=#0d47a1;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#90caf9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="p4" value="Konfirmasi Serah Terima Donor">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_r_p4_in" edge="1" parent="1" source="ent_rec" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1976d2;strokeWidth=1.6;fontSize=10;fontColor=#0d47a1;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#90caf9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="p4" value="Konfirmasi Barang Diterima Recipient">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_p4_d_out" edge="1" parent="1" source="p4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=1.6;fontSize=10;fontColor=#1b5e20;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#a5d6a7;exitX=0.2;exitY=0;exitDx=0;exitDy=0;entryX=0.4;entryY=1;entryDx=0;entryDy=0;" target="ent_donor" value="Arsip Riwayat Donasi Selesai">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_p4_r_out" edge="1" parent="1" source="p4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=1.6;fontSize=10;fontColor=#1b5e20;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#a5d6a7;exitX=0.8;exitY=0;exitDx=0;exitDy=0;entryX=0.6;entryY=1;entryDx=0;entryDy=0;" target="ent_rec" value="Arsip Riwayat Penerimaan Selesai">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_p4_ds_hist" edge="1" parent="1" source="p4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ds_history" value="Simpan Rekapitulasi Riwayat">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_d_p5_in" edge="1" parent="1" source="ent_donor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1976d2;strokeWidth=1.6;fontSize=10;fontColor=#0d47a1;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#90caf9;exitX=1;exitY=0.7;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="p5" value="Kirim Pesan Chat Donor">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_r_p5_in" edge="1" parent="1" source="ent_rec" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1976d2;strokeWidth=1.6;fontSize=10;fontColor=#0d47a1;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#90caf9;exitX=0;exitY=0.7;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="p5" value="Kirim Pesan Chat Recipient">
+          <mxGeometry relative="1" x="-0.1481" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_p5_d_out" edge="1" parent="1" source="p5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=1.6;fontSize=10;fontColor=#1b5e20;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#a5d6a7;exitX=0;exitY=0.2;exitDx=0;exitDy=0;entryX=0.8;entryY=0.5;entryDx=0;entryDy=0;" target="ent_donor" value="Pesan Diterima Donor">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_p5_r_out" edge="1" parent="1" source="p5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=1.6;fontSize=10;fontColor=#1b5e20;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#a5d6a7;exitX=1;exitY=0.2;exitDx=0;exitDy=0;entryX=0.2;entryY=0.5;entryDx=0;entryDy=0;" target="ent_rec" value="Pesan Diterima Recipient">
+          <mxGeometry relative="1" x="-0.028" y="20" as="geometry">
+            <mxPoint x="20" y="20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_p5_ds_chats" edge="1" parent="1" source="p5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ds_chats" value="Simpan Percakapan &amp; Pesan">
+          <mxGeometry relative="1" x="0.2727" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_p6_ds_notif" edge="1" parent="1" source="p6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="ds_notifs" value="Baca/Tulis Notifikasi">
+          <mxGeometry relative="1" x="-0.4029" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_p6_ds_logs" edge="1" parent="1" source="p6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=0;exitY=0.2;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="ds_logs" value="Rekam Log Aktivitas Pengguna">
+          <mxGeometry relative="1" x="0.0495" y="-20" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontColor=#0d47a1;strokeWidth=2;fontStyle=1;fontSize=12;shadow=1;arcSize=18;" value="&lt;b style=&#39;font-size:13px;&#39;&gt;2.0&lt;/b&gt;&lt;br&gt;&lt;b style=&#39;font-size:12px;&#39;&gt;Manajemen Donasi &amp; Kategori&lt;/b&gt;" vertex="1">
+          <mxGeometry height="85" width="240" x="590" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="p5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontColor=#0d47a1;strokeWidth=2;fontStyle=1;fontSize=12;shadow=1;arcSize=18;" value="&lt;b style=&#39;font-size:13px;&#39;&gt;5.0&lt;/b&gt;&lt;br&gt;&lt;b style=&#39;font-size:12px;&#39;&gt;Komunikasi &amp; Pesan Langsung (Chat)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="85" width="240" x="1350" y="790" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page_dfd_lvl2_p2" name="2. DFD Level 2 - Proses 2.0 (Donasi)">
+    <mxGraphModel dx="774" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title_lvl2_p2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;" value="&lt;h1 style=&#39;font-size:22px;margin:0;color:#0d47a1;&#39;&gt;DFD LEVEL 2 - PROSES 2.0 (MANAJEMEN DONASI &amp; KATALOG)&lt;/h1&gt;&lt;p style=&#39;font-size:12px;color:#546e7a;margin:3px 0 0 0;&#39;&gt;Rincian Dekomposisi Proses Pengelolaan Kategori, Pembuatan Donasi, Upload Foto &amp; Pencarian&lt;/p&gt;" vertex="1">
+          <mxGeometry height="55" width="1100" x="60" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_donor" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=13;fontFamily=Helvetica;fillColor=#e8f5e9;strokeColor=#2e7d32;fontColor=#1b5e20;strokeWidth=2;shadow=1;" value="&lt;b style=&#39;font-size:13px;&#39;&gt;DONOR&lt;/b&gt;" vertex="1">
+          <mxGeometry height="65" width="160" x="80" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_rec" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=13;fontFamily=Helvetica;fillColor=#fff3e0;strokeColor=#ef6c00;fontColor=#e65100;strokeWidth=2;shadow=1;" value="&lt;b style=&#39;font-size:13px;&#39;&gt;RECIPIENT&lt;/b&gt;" vertex="1">
+          <mxGeometry height="65" width="160" x="2150" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontColor=#0d47a1;strokeWidth=2;fontStyle=1;fontSize=12;shadow=1;arcSize=18;" value="&lt;b style=&#39;font-size:12px;&#39;&gt;2.1&lt;/b&gt;&lt;br&gt;&lt;b&gt;Kelola Kategori Master&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="200" x="1100" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontColor=#0d47a1;strokeWidth=2;fontStyle=1;fontSize=12;shadow=1;arcSize=18;" value="&lt;b style=&#39;font-size:12px;&#39;&gt;2.2&lt;/b&gt;&lt;br&gt;&lt;b&gt;Input Data &amp; Form Donasi&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="210" x="480" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontColor=#0d47a1;strokeWidth=2;fontStyle=1;fontSize=12;shadow=1;arcSize=18;" value="&lt;b style=&#39;font-size:12px;&#39;&gt;2.3&lt;/b&gt;&lt;br&gt;&lt;b&gt;Upload Foto Barang&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="200" x="850" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontColor=#0d47a1;strokeWidth=2;fontStyle=1;fontSize=12;shadow=1;arcSize=18;" value="&lt;b style=&#39;font-size:12px;&#39;&gt;2.4&lt;/b&gt;&lt;br&gt;&lt;b&gt;Publikasi &amp; Update Status&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="210" x="1200" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontColor=#0d47a1;strokeWidth=2;fontStyle=1;fontSize=12;shadow=1;arcSize=18;" value="&lt;b style=&#39;font-size:12px;&#39;&gt;2.5&lt;/b&gt;&lt;br&gt;&lt;b&gt;Eksplorasi &amp; Filter Donasi&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="220" x="1750" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_ds_cat" parent="1" style="shape=partialRectangle;top=0;bottom=0;fillColor=#fffde7;strokeColor=#fbc02d;fontColor=#f57f17;strokeWidth=2;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;shadow=1;" value="&lt;b&gt;D3&lt;/b&gt; | Tabel Kategori" vertex="1">
+          <mxGeometry height="45" width="200" x="750" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_ds_don" parent="1" style="shape=partialRectangle;top=0;bottom=0;fillColor=#fffde7;strokeColor=#fbc02d;fontColor=#f57f17;strokeWidth=2;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;shadow=1;" value="&lt;b&gt;D4&lt;/b&gt; | Tabel Donasi" vertex="1">
+          <mxGeometry height="45" width="200" x="1100" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_ds_img" parent="1" style="shape=partialRectangle;top=0;bottom=0;fillColor=#fffde7;strokeColor=#fbc02d;fontColor=#f57f17;strokeWidth=2;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;shadow=1;" value="&lt;b&gt;D4.1&lt;/b&gt; | Tabel Foto Donasi" vertex="1">
+          <mxGeometry height="45" width="200" x="850" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="e2_2" edge="1" parent="1" source="p2_1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="p2_ds_cat" value="Simpan Kategori">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2_3" edge="1" parent="1" source="p2_ds_cat" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.7;entryY=0;entryDx=0;entryDy=0;" target="p2_2" value="Pilih Kategori">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2_4" edge="1" parent="1" source="p2_donor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1976d2;strokeWidth=1.6;fontSize=10;fontColor=#0d47a1;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#90caf9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="p2_2" value="Form Donasi (Judul, Kondisi, Alamat)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2_5" edge="1" parent="1" source="p2_2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1976d2;strokeWidth=1.6;fontSize=10;fontColor=#0d47a1;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#90caf9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="p2_3" value="Kirim File Foto">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2_6" edge="1" parent="1" source="p2_3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="p2_ds_img" value="Simpan Foto &amp; Primary Flag">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2_7" edge="1" parent="1" source="p2_3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1976d2;strokeWidth=1.6;fontSize=10;fontColor=#0d47a1;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#90caf9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="p2_4" value="Data Siap Publikasi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2_8" edge="1" parent="1" source="p2_4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="p2_ds_don" value="Simpan Donasi (Status: Published)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2_9" edge="1" parent="1" source="p2_rec" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1976d2;strokeWidth=1.6;fontSize=10;fontColor=#0d47a1;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#90caf9;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="p2_5" value="Pencarian &amp; Filter Kategori/Kota">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2_10" edge="1" parent="1" source="p2_ds_don" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.2;entryY=1;entryDx=0;entryDy=0;" target="p2_5" value="Baca Daftar Donasi Aktif">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2_11" edge="1" parent="1" source="p2_5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=1.6;fontSize=10;fontColor=#1b5e20;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#a5d6a7;exitX=0.8;exitY=1;exitDx=0;exitDy=0;entryX=0.3;entryY=1;entryDx=0;entryDy=0;" target="p2_rec" value="Tampilkan Katalog &amp; Detail Barang">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page_dfd_lvl2_p3" name="3. DFD Level 2 - Proses 3.0 &amp; 4.0 (Pengajuan &amp; Riwayat)">
+    <mxGraphModel dx="0" dy="0" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2600" pageHeight="1800" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title_lvl2_p3" parent="1" vertex="1" value="&lt;h1 style=&#39;font-size:22px;margin:0;color:#0d47a1;&#39;&gt;DFD LEVEL 2 - PROSES 3.0 &amp; 4.0 (PENGAJUAN &amp; PENYELESAIAN DONASI)&lt;/h1&gt;&lt;p style=&#39;font-size:12px;color:#546e7a;margin:3px 0 0 0;&#39;&gt;Rincian Dekomposisi Pengajuan Permohonan, Review Donor, Approval, Pengambilan &amp; Arsip Riwayat&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;">
+          <mxGeometry x="60" y="40" width="1200" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_rec" parent="1" vertex="1" value="&lt;b style=&#39;font-size:13px;&#39;&gt;RECIPIENT&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=13;fontFamily=Helvetica;fillColor=#fff3e0;strokeColor=#ef6c00;fontColor=#e65100;strokeWidth=2;shadow=1;">
+          <mxGeometry x="100" y="550" width="160" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_donor" parent="1" vertex="1" value="&lt;b style=&#39;font-size:13px;&#39;&gt;DONOR&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=13;fontFamily=Helvetica;fillColor=#e8f5e9;strokeColor=#2e7d32;fontColor=#1b5e20;strokeWidth=2;shadow=1;">
+          <mxGeometry x="2300" y="550" width="160" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_1" parent="1" vertex="1" value="&lt;b style=&#39;font-size:12px;&#39;&gt;3.1&lt;/b&gt;&lt;br&gt;&lt;b&gt;Ajukan Permohonan Donasi&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontColor=#0d47a1;strokeWidth=2;fontStyle=1;fontSize=12;shadow=1;arcSize=18;">
+          <mxGeometry x="480" y="550" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_2" parent="1" vertex="1" value="&lt;b style=&#39;font-size:12px;&#39;&gt;3.2&lt;/b&gt;&lt;br&gt;&lt;b&gt;Review &amp; Verifikasi Permohonan&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontColor=#0d47a1;strokeWidth=2;fontStyle=1;fontSize=12;shadow=1;arcSize=18;">
+          <mxGeometry x="950" y="550" width="230" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_3" parent="1" vertex="1" value="&lt;b style=&#39;font-size:12px;&#39;&gt;3.3&lt;/b&gt;&lt;br&gt;&lt;b&gt;Persetujuan / Penolakan Donor&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontColor=#0d47a1;strokeWidth=2;fontStyle=1;fontSize=12;shadow=1;arcSize=18;">
+          <mxGeometry x="1450" y="550" width="230" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_1" parent="1" vertex="1" value="&lt;b style=&#39;font-size:12px;&#39;&gt;4.1&lt;/b&gt;&lt;br&gt;&lt;b&gt;Konfirmasi Penjemputan Barang&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontColor=#0d47a1;strokeWidth=2;fontStyle=1;fontSize=12;shadow=1;arcSize=18;">
+          <mxGeometry x="1150" y="850" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p4_2" parent="1" vertex="1" value="&lt;b style=&#39;font-size:12px;&#39;&gt;4.2&lt;/b&gt;&lt;br&gt;&lt;b&gt;Pencatatan Riwayat Serah Terima&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontColor=#0d47a1;strokeWidth=2;fontStyle=1;fontSize=12;shadow=1;arcSize=18;">
+          <mxGeometry x="1650" y="850" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_ds_req" parent="1" vertex="1" value="&lt;b&gt;D5&lt;/b&gt; | Tabel Pengajuan (donation_requests)" style="shape=partialRectangle;top=0;bottom=0;fillColor=#fffde7;strokeColor=#fbc02d;fontColor=#f57f17;strokeWidth=2;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;shadow=1;">
+          <mxGeometry x="700" y="320" width="260" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_ds_log" parent="1" vertex="1" value="&lt;b&gt;D5.1&lt;/b&gt; | Tabel Request Logs" style="shape=partialRectangle;top=0;bottom=0;fillColor=#fffde7;strokeColor=#fbc02d;fontColor=#f57f17;strokeWidth=2;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;shadow=1;">
+          <mxGeometry x="1200" y="320" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_ds_don" parent="1" vertex="1" value="&lt;b&gt;D4&lt;/b&gt; | Tabel Donasi (Status Update)" style="shape=partialRectangle;top=0;bottom=0;fillColor=#fffde7;strokeColor=#fbc02d;fontColor=#f57f17;strokeWidth=2;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;shadow=1;">
+          <mxGeometry x="1600" y="320" width="240" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_ds_hist" parent="1" vertex="1" value="&lt;b&gt;D6&lt;/b&gt; | Tabel Riwayat Donasi (histories)" style="shape=partialRectangle;top=0;bottom=0;fillColor=#fffde7;strokeColor=#fbc02d;fontColor=#f57f17;strokeWidth=2;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;shadow=1;">
+          <mxGeometry x="1650" y="1080" width="250" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="p3_ds_notif" parent="1" vertex="1" value="&lt;b&gt;D8&lt;/b&gt; | Tabel Notifikasi" style="shape=partialRectangle;top=0;bottom=0;fillColor=#fffde7;strokeColor=#fbc02d;fontColor=#f57f17;strokeWidth=2;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;shadow=1;">
+          <mxGeometry x="1050" y="1080" width="220" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="e3_1" parent="1" edge="1" source="p3_rec" target="p3_1" value="Request Donasi + Alasan" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1976d2;strokeWidth=1.6;fontSize=10;fontColor=#0d47a1;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#90caf9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3_2" parent="1" edge="1" source="p3_1" target="p3_ds_req" value="Simpan Pengajuan (Status: Pending)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.2;entryY=1;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3_3" parent="1" edge="1" source="p3_1" target="p3_2" value="Kirim Notifikasi ke Donor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=1.6;fontSize=10;fontColor=#1b5e20;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#a5d6a7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3_4" parent="1" edge="1" source="p3_2" target="p3_donor" value="Tampilkan Data Pemohon ke Donor" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=1.6;fontSize=10;fontColor=#1b5e20;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#a5d6a7;exitX=1;exitY=0.2;exitDx=0;exitDy=0;entryX=0;entryY=0.2;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3_5" parent="1" edge="1" source="p3_donor" target="p3_3" value="Keputusan Donor (Approve / Reject)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1976d2;strokeWidth=1.6;fontSize=10;fontColor=#0d47a1;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#90caf9;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3_6" parent="1" edge="1" source="p3_3" target="p3_ds_req" value="Update Status Pengajuan (Approved)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=0.2;exitY=0;exitDx=0;exitDy=0;entryX=0.8;entryY=1;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3_7" parent="1" edge="1" source="p3_3" target="p3_ds_log" value="Catat Status Log (RequestLog)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3_8" parent="1" edge="1" source="p3_3" target="p3_ds_don" value="Update Status Donasi (Approved)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=0.8;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4_1" parent="1" edge="1" source="p3_3" target="p4_1" value="Koordinasi Penjemputan / Picked Up" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1976d2;strokeWidth=1.6;fontSize=10;fontColor=#0d47a1;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#90caf9;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4_2" parent="1" edge="1" source="p4_1" target="p4_2" value="Konfirmasi Donasi Sukses (Completed)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1976d2;strokeWidth=1.6;fontSize=10;fontColor=#0d47a1;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#90caf9;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4_3" parent="1" edge="1" source="p4_2" target="p3_ds_hist" value="Simpan Rekapitulasi Riwayat Donasi" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=1.6;fontSize=10;fontColor=#bf360c;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#ffcc80;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4_4" parent="1" edge="1" source="p4_2" target="p3_ds_notif" value="Kirim Notifikasi Penyelesaian" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=1.6;fontSize=10;fontColor=#1b5e20;fontFamily=Helvetica;endArrow=classic;endFill=1;labelBackgroundColor=#ffffff;labelBorderColor=#a5d6a7;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

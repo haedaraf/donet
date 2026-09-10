@@ -1,153 +1,168 @@
 import { Head, Link } from '@inertiajs/react';
+import donateImage from '../../../storage/app/public/Donatelogo.png';
+import Footer from '@/components/footer';
 import {
     Search,
     Package,
     Users,
-    Heart,
-    Globe,
     Shirt,
     Book,
     Laptop,
     Backpack,
     Home,
     MoreHorizontal,
-    Clover
+    MapPin,
+    Phone,
+    Mail
 } from 'lucide-react';
+
 
 export default function Welcome() {
     return (
         <>
             <Head title="Welcome to Donate Yours" />
-            <div className="min-h-screen bg-white font-sans text-gray-900">
-                {/* Navigation */}
-                <header className="container mx-auto flex items-center justify-between px-6 py-4 lg:px-12">
-                    <div className="flex items-center gap-2 text-[#5B75FF]">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-8">
-                            <circle cx="12" cy="18" r="8" fill="currentColor" />
-                            <rect x="16" y="6" width="6" height="20" rx="3" fill="currentColor" />
-                        </svg>
-                        <span className="text-xl font-bold tracking-tight">Donate Yours</span>
-                    </div>
-
-                    <nav className="hidden md:flex items-center gap-8">
-                        <Link href="/" className="font-semibold text-[#5B75FF] border-b-2 border-[#5B75FF] pb-1">Beranda</Link>
-                        <Link href="#" className="font-medium text-gray-700 hover:text-[#5B75FF] transition-colors">Donasi Barang</Link>
-                        <Link href="#" className="font-medium text-gray-700 hover:text-[#5B75FF] transition-colors">Cari Barang</Link>
-                        <Link href="/cara-kerja" className="font-medium text-gray-700 hover:text-[#5B75FF] transition-colors">Cara Kerja</Link>
-                        <Link href="#" className="font-medium text-gray-700 hover:text-[#5B75FF] transition-colors">Tentang Kami</Link>
-                    </nav>
-
-                    <div className="flex items-center gap-4">
-                        <button className="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 text-[#5B75FF] hover:bg-gray-50 transition-colors">
-                            <Search className="h-5 w-5" />
-                        </button>
-                        <Link href="/login" className="rounded-lg border border-gray-200 px-6 py-2 font-medium text-gray-700 hover:bg-gray-50 transition-colors">
-                            Masuk
-                        </Link>
-                        <Link href="/register" className="rounded-lg bg-[#5B75FF] px-6 py-2 font-medium text-white hover:bg-[#4a61db] transition-colors shadow-sm">
-                            Daftar
-                        </Link>
-                    </div>
-                </header>
-
-                <main className="container mx-auto px-6 pt-12 pb-24 lg:px-12">
-                    {/* Hero Section */}
-                    <div className="flex flex-col md:flex-row items-center justify-between mb-12 relative">
-                        <div className="w-full md:w-1/2 pr-0 md:pr-12 z-10 py-12">
-                            <h1 className="text-5xl md:text-[3.5rem] font-extrabold leading-[1.1] text-gray-900 mb-6">
-                                Barangmu<br/>
-                                Masih Layak.<br/>
-                                Hidup Orang Lain<br/>
-                                Bisa Lebih Baik.
-                            </h1>
-                            <p className="text-lg text-gray-600 mb-8 max-w-[400px] leading-relaxed">
-                                Bagikan barangmu yang<br/>
-                                layak dipakai untuk mereka<br/>
-                                yang membutuhkan
-                            </p>
-                            <div className="flex flex-wrap gap-4">
-                                <Link href="#" className="rounded-lg bg-[#5B75FF] px-8 py-3.5 font-semibold text-white hover:bg-[#4a61db] transition-colors shadow-md shadow-blue-500/20">
-                                    Donasikan Barang
-                                </Link>
-                                <Link href="#" className="rounded-lg border-2 border-[#5B75FF] px-8 py-3.5 font-semibold text-[#5B75FF] hover:bg-blue-50 transition-colors">
-                                    Cari Barang
-                                </Link>
+            <div className="min-h-screen bg-[#FAF8F5] font-sans text-gray-900 flex flex-col justify-between">
+                <div>
+                    {/* Header / Navigation */}
+                    <header className="public-navbar w-full flex items-center justify-between px-6 py-4 lg:px-12 bg-[#535226] border-b border-[#41401E] shadow-lg">
+                        <div className="flex items-center gap-12">
+                            {/* Logo Custom */}
+                            <div className="flex items-center gap-2">
+                                <img
+                                    src={donateImage}
+                                    alt="Logo"
+                                    className="w-auto h-10 object-contain"
+                                />
+                                <span className="text-xl font-bold tracking-tight text-[#74732F]">Donate Yours</span>
                             </div>
+
+                            <nav className="hidden lg:flex items-center gap-8 text-sm mt-1">
+                                <Link href="/" className="font-bold text-[#74732F] border-b-2 border-[#74732F] pb-1">Beranda</Link>
+                                <Link href="#" className="font-semibold text-gray-600 hover:text-[#74732F] transition-colors pb-1">Donasi Barang</Link>
+                                <Link href="/cari-barang" className="font-semibold text-gray-600 hover:text-[#74732F] transition-colors pb-1">Cari Barang</Link>
+                                <Link href="/cara-kerja" className="font-semibold text-gray-600 hover:text-[#74732F] transition-colors pb-1">Cara Kerja</Link>
+                                <Link href="/tentang-kami" className="font-semibold text-gray-600 hover:text-[#74732F] transition-colors pb-1">Tentang Kami</Link>
+                            </nav> 
                         </div>
-                        <div className="w-full md:w-1/2 h-[550px] mt-12 md:mt-0 relative md:absolute md:right-0 md:top-0">
-                            {/* Gradient mask for smooth blending on the left, matching the design */}
-                            <div className="absolute inset-y-0 left-0 w-48 bg-gradient-to-r from-white via-white/80 to-transparent z-10 hidden md:block"></div>
-                            <img 
-                                src="https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-                                alt="Volunteers at donation center" 
-                                className="w-full h-full object-cover rounded-2xl md:rounded-l-none md:rounded-r-3xl md:w-[120%] lg:w-[150%] max-w-none md:-mr-[20%] lg:-mr-[50%] object-right"
-                            />
-                        </div>
-                    </div>
 
-                    {/* Stats Section */}
-                    <div className="bg-[#5B75FF] rounded-2xl text-white mb-16 shadow-xl relative z-20">
-                        <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/20">
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 p-8">
-                                <Clover className="h-10 w-10 flex-shrink-0" strokeWidth={1.5} />
-                                <div className="text-center sm:text-left">
-                                    <div className="text-2xl lg:text-3xl font-bold">1.250+</div>
-                                    <div className="text-blue-100 text-xs lg:text-sm font-medium">Barang Didonasikan</div>
-                                </div>
-                            </div>
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 p-8">
-                                <Clover className="h-10 w-10 flex-shrink-0" strokeWidth={1.5} />
-                                <div className="text-center sm:text-left">
-                                    <div className="text-2xl lg:text-3xl font-bold">850+</div>
-                                    <div className="text-blue-100 text-xs lg:text-sm font-medium">Penerima Terbantu</div>
-                                </div>
-                            </div>
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 p-8">
-                                <Clover className="h-10 w-10 flex-shrink-0" strokeWidth={1.5} />
-                                <div className="text-center sm:text-left">
-                                    <div className="text-2xl lg:text-3xl font-bold">320+</div>
-                                    <div className="text-blue-100 text-xs lg:text-sm font-medium">Donatur Aktif</div>
-                                </div>
-                            </div>
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 p-8">
-                                <Clover className="h-10 w-10 flex-shrink-0" strokeWidth={1.5} />
-                                <div className="text-center sm:text-left">
-                                    <div className="text-2xl lg:text-3xl font-bold">45+</div>
-                                    <div className="text-blue-100 text-xs lg:text-sm font-medium">Komunitas Terhubung</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Categories Section */}
-                    <div>
-                        <div className="flex items-center justify-between mb-8">
-                            <h2 className="text-2xl font-bold text-gray-900">Kategori Barang</h2>
-                            <Link href="#" className="font-semibold text-[#5B75FF] hover:text-[#4a61db] transition-colors">
-                                Lihat Semua
+                        <div className="flex items-center gap-4">
+                            <button className="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-300 text-gray-600 hover:text-[#74732F] hover:border-[#74732F] transition-colors">
+                                <Search className="h-5 w-5" />
+                            </button>
+                            <Link href="/login" className="rounded-lg border border-gray-300 px-6 py-2 text-sm font-semibold text-gray-800 hover:border-[#74732F] hover:text-[#74732F] transition-colors">
+                                Masuk
+                            </Link>
+                            <Link href="/register" className="rounded-lg bg-[#FFBAC6] px-6 py-2 text-sm font-semibold text-white hover:bg-[#E89AA9] transition-colors">
+                                Daftar
                             </Link>
                         </div>
+                    </header>
+
+                    {/* Main Content */}
+                    <main className="container mx-auto px-6 lg:px-12 pt-10 pb-16">
                         
-                        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-4">
-                            {[
-                                { name: 'Pakaian', count: 254, icon: Clover },
-                                { name: 'Buku', count: 254, icon: Clover },
-                                { name: 'Elektronik', count: 254, icon: Clover },
-                                { name: 'Peralatan Sekolah', count: 254, icon: Clover },
-                                { name: 'Furnitur', count: 254, icon: Clover },
-                                { name: 'Pakaian', count: 254, icon: Clover },
-                                { name: 'Pakaian', count: 254, icon: Clover },
-                                { name: 'Lain-lain', count: 254, icon: MoreHorizontal },
-                            ].map((category, index) => (
-                                <div key={index} className="flex flex-col items-center justify-center py-6 px-4 border border-gray-200 rounded-2xl hover:border-[#5B75FF] hover:shadow-lg hover:shadow-blue-500/10 transition-all cursor-pointer group bg-white">
-                                    <category.icon className="h-10 w-10 text-[#5B75FF] mb-4 group-hover:scale-110 transition-transform" strokeWidth={1.5} />
-                                    <span className="font-bold text-gray-900 text-sm mb-1 text-center">{category.name}</span>
-                                    <span className="text-xs text-gray-500">{category.count} barang</span>
+                        {/* Hero Section */}
+                        <div className="relative flex flex-col-reverse lg:flex-row items-center justify-between min-h-[420px] mb-8">
+                            <div className="w-full lg:w-1/2 z-10 py-8 lg:pr-10 bg-white">
+                                <h1 className="text-4xl lg:text-5xl font-extrabold leading-[1.2] text-black mb-6 tracking-tight">
+                                    Barangmu<br />
+                                    Masih Layak.<br />
+                                    Hidup Orang Lain<br />
+                                    Bisa Lebih Baik.
+                                </h1>
+                                <p className="text-base text-gray-700 mb-8 max-w-[340px] leading-relaxed font-medium">
+                                    Bagikan barangmu yang<br />
+                                    layak dipakai untuk mereka<br />
+                                    yang membutuhkan
+                                </p>
+                                <div className="flex flex-wrap gap-4">
+                                    <Link href="#" className="rounded-xl bg-[#FFBAC6] px-8 py-3 text-sm font-bold text-white hover:bg-[#E89AA9] transition-colors">
+                                        Donasikan Barang
+                                    </Link>
+                                    <Link href="#" className="rounded-xl border-2 border-[#74732F] px-8 py-3 text-sm font-bold text-[#74732F] hover:bg-primary-50 transition-colors bg-white">
+                                        Cari Barang
+                                    </Link>
                                 </div>
-                            ))}
+                            </div>
+
+                            {/* Hero Banner Image with Gradient Mask */}
+                            <div className="w-full lg:w-3/5 h-[300px] lg:h-[450px] absolute right-0 top-0 lg:-mr-12 -z-0">
+                                <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white to-transparent z-10" />
+                                <img
+                                    src="https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                    alt="Volunteers at donation center"
+                                    className="w-full h-full object-cover object-center"
+                                />
+                            </div>
                         </div>
-                    </div>
-                </main>
+
+                        {/* Stats Banner */}
+                        <div className="bg-[#74732F] rounded-[2rem] text-white mb-16 shadow-lg relative z-10">
+                            <div className="grid grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-white/30">
+                                <div className="flex items-center justify-center gap-5 p-6">
+                                    <Shirt className="h-12 w-12 text-white stroke-[1.5]" />
+                                    <div className="flex flex-col">
+                                        <span className="text-3xl font-extrabold tracking-tight">1.250+</span>
+                                        <span className="text-white/90 text-xs font-medium mt-1">Barang Didonasikan</span>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center justify-center gap-5 p-6">
+                                    <Package className="h-12 w-12 text-white stroke-[1.5]" />
+                                    <div className="flex flex-col">
+                                        <span className="text-3xl font-extrabold tracking-tight">850+</span>
+                                        <span className="text-white/90 text-xs font-medium mt-1">Penerima Terbantu</span>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center justify-center gap-5 p-6">
+                                    <MapPin className="h-12 w-12 text-white stroke-[1.5]" />
+                                    <div className="flex flex-col">
+                                        <span className="text-3xl font-extrabold tracking-tight">320+</span>
+                                        <span className="text-white/90 text-xs font-medium mt-1">Donatur Aktif</span>
+                                    </div>
+                                </div>
+
+                                <div className="flex items-center justify-center gap-5 p-6">
+                                    <Users className="h-12 w-12 text-white stroke-[1.5]" />
+                                    <div className="flex flex-col">
+                                        <span className="text-3xl font-extrabold tracking-tight">45+</span>
+                                        <span className="text-white/90 text-xs font-medium mt-1">Komunitas Terhubung</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Categories Section */}
+                        <div>
+                            <div className="flex items-center justify-between mb-6">
+                                <h2 className="text-2xl font-bold text-gray-900">Kategori Barang</h2>
+                                <Link href="#" className="text-sm font-bold text-[#74732F] hover:underline">
+                                    Lihat Semua
+                                </Link>
+                            </div>
+
+                            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+                                {[
+                                    { name: 'Pakaian', count: '254 barang', icon: Shirt },
+                                    { name: 'Buku', count: '254 barang', icon: Book },
+                                    { name: 'Elektronik', count: '254 barang', icon: Laptop },
+                                    { name: 'Peralatan Sekolah', count: '254 barang', icon: Backpack },
+                                    { name: 'Furnitur', count: '254 barang', icon: Home },
+                                    { name: 'Lain-lain', count: '254 barang', icon: MoreHorizontal },
+                                ].map((cat, i) => (
+                                    <div key={i} className="flex flex-col items-center justify-center py-8 px-4 border-2 border-gray-200 rounded-3xl bg-white hover:border-[#74732F] hover:shadow-sm transition-all cursor-pointer group">
+                                        <cat.icon className="h-12 w-12 text-[#74732F] mb-4 stroke-[1.5] group-hover:scale-110 transition-transform" />
+                                        <span className="font-bold text-gray-900 text-sm mb-1 text-center">{cat.name}</span>
+                                        <span className="text-xs text-gray-500">{cat.count}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </main>
+                </div>
+
+                <Footer />
             </div>
         </>
     );

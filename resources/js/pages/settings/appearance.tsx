@@ -1,32 +1,19 @@
 import { Head } from '@inertiajs/react';
-import AppearanceTabs from '@/components/appearance-tabs';
 import Heading from '@/components/heading';
-import { edit as editAppearance } from '@/routes/appearance';
+import DashboardLayout from '@/layouts/dashboard-layout';
 
 export default function Appearance() {
     return (
-        <>
-            <Head title="Appearance settings" />
+        <DashboardLayout>
+            <Head title="Pengaturan Tampilan" />
 
-            <h1 className="sr-only">Appearance settings</h1>
-
-            <div className="space-y-6">
+            <div className="p-8 max-w-4xl space-y-6">
                 <Heading
                     variant="small"
-                    title="Appearance settings"
-                    description="Update the appearance settings for your account"
+                    title="Pengaturan Tampilan"
+                    description="DonateYours menggunakan tema terang bernuansa hangat."
                 />
-                <AppearanceTabs />
             </div>
-        </>
+        </DashboardLayout>
     );
 }
-
-Appearance.layout = {
-    breadcrumbs: [
-        {
-            title: 'Appearance settings',
-            href: editAppearance(),
-        },
-    ],
-};

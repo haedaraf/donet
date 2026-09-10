@@ -3,7 +3,7 @@ import { login } from '@/routes';
 import { store } from '@/routes/register';
 import { useState } from 'react';
 import { User, Mail, Phone, Key, Eye, EyeOff } from 'lucide-react';
-
+import donateImage from '../../../../storage/app/public/Donatelogo.png';
 type Props = {
     passwordRules: string;
 };
@@ -14,16 +14,16 @@ export default function Register({ passwordRules }: Props) {
     const [role, setRole] = useState('donor');
 
     return (
-        <div className="min-h-screen w-full flex items-center justify-center p-4 md:p-8 bg-[linear-gradient(243.43deg,#5170FF_13.62%,#BEC9FF_40.13%,#9FB0FF_65.01%,#5170FF_87.38%)]">
+        <div className="min-h-screen w-full flex items-center justify-center p-4 md:p-8 bg-[#EDF1FF]">
             <Head title="Register" />
             
             <div className="bg-white rounded-[24px] p-8 w-full max-w-[460px]">
                 <div className="mb-6 text-center flex flex-col items-center">
                     <div className="mb-4">
-                        <svg width="32" height="40" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="20" y="0" width="12" height="40" rx="6" fill="#5170FF" />
-                            <path d="M20 16C13.3726 16 8 21.3726 8 28C8 34.6274 13.3726 40 20 40V16Z" fill="#5170FF" />
-                        </svg>
+                        <img 
+                            src={donateImage}
+                            alt="Logo"
+                            className="w-auto h-20 object-contain"/>
                     </div>
                     <h1 className="text-xl font-bold text-gray-900 mb-1">Daftar Akun Baru</h1>
                     <p className="text-[12px] text-gray-500">Isi data diri anda untuk membuat akun</p>

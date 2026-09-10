@@ -30,8 +30,9 @@ class DonationController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Donation $donation)
+    public function show($id)
     {
+        $donation = Donation::withTrashed()->findOrFail($id);
         return redirect()->route('explore.show', $donation->id);
     }
 
@@ -65,7 +66,7 @@ class DonationController extends Controller
         ]);
 
         $validated['user_id'] = Auth::id();
-        $validated['status'] = 'draft'; // or published
+        $validated['status'] = 'published';
 
         $donation = Donation::create($validated);
 

@@ -16,7 +16,7 @@ export default function DonationForm({ donation, categories }: { donation: any, 
         pickup_address: donation.pickup_address || '',
         city: donation.city || '',
         province: donation.province || '',
-        status: donation.status || 'draft',
+        status: donation.status || 'published',
         images: [] as File[]
     });
 

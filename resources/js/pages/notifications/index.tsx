@@ -50,8 +50,8 @@ export default function NotificationsIndex({ requests }: { requests: any }) {
 
                 {(!requests?.data || requests.data.length === 0) ? (
                     <div className="bg-white rounded-3xl p-12 border border-gray-200 text-center flex flex-col items-center justify-center">
-                        <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mb-6">
-                            <Bell className="w-10 h-10 text-[#5170FF]" />
+                        <div className="w-20 h-20 bg-primary-50 rounded-full flex items-center justify-center mb-6">
+                            <Bell className="w-10 h-10 text-[#3F7859]" />
                         </div>
                         <h3 className="text-[20px] font-bold text-gray-900 mb-2">Belum Ada Notifikasi</h3>
                         <p className="text-[14px] text-gray-500 mb-8 max-w-md">Saat ini belum ada notifikasi masuk untuk Anda.</p>
@@ -64,7 +64,7 @@ export default function NotificationsIndex({ requests }: { requests: any }) {
                                 <div 
                                     key={req.id} 
                                     onClick={() => isPending ? setSelectedReq(req) : null}
-                                    className={`bg-white rounded-2xl border ${isPending ? 'border-blue-200 bg-blue-50/30 cursor-pointer hover:border-[#5170FF]' : 'border-gray-200 opacity-70'} p-5 flex items-start gap-4 transition-colors`}
+                                    className={`bg-white rounded-2xl border ${isPending ? 'border-primary-500/30 bg-primary-50 cursor-pointer hover:border-primary-500' : 'border-gray-200 opacity-70'} p-5 flex items-start gap-4 transition-colors`}
                                 >
                                     <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200 shrink-0">
                                         {req.recipient?.avatar ? (
@@ -86,7 +86,7 @@ export default function NotificationsIndex({ requests }: { requests: any }) {
                                             <p className="text-[13px] text-gray-600 italic line-clamp-1 mb-2">"{req.message}"</p>
                                         )}
                                         {isPending ? (
-                                            <span className="text-[12px] font-bold text-[#5170FF]">Klik untuk melihat detail & merespons</span>
+                                            <span className="text-[12px] font-bold text-[#3F7859]">Klik untuk melihat detail & merespons</span>
                                         ) : (
                                             <span className="text-[12px] font-bold text-gray-500">Status: {req.status}</span>
                                         )}
@@ -106,7 +106,7 @@ export default function NotificationsIndex({ requests }: { requests: any }) {
                                 href={link.url || '#'}
                                 className={`px-4 py-2 text-[13px] rounded-lg transition-colors ${
                                     link.active 
-                                    ? 'bg-[#5170FF] text-white font-bold shadow-sm' 
+                                    ? 'bg-[#3F7859] text-white font-bold shadow-sm' 
                                     : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50'
                                 } ${!link.url && 'opacity-50 cursor-not-allowed'}`}
                                 dangerouslySetInnerHTML={{ __html: link.label }}
@@ -169,14 +169,14 @@ export default function NotificationsIndex({ requests }: { requests: any }) {
                             <button
                                 onClick={() => handleAction(selectedReq.id, 'reject')}
                                 disabled={processing && actionId === selectedReq.id}
-                                className="flex-1 py-3 bg-white hover:bg-red-50 text-red-600 rounded-xl font-bold text-[14px] transition-colors border border-red-200 disabled:opacity-50"
+                                className="flex-1 py-3 bg-red-600 hover:bg-red-700 text-white rounded-xl font-bold text-[14px] transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-red-300 disabled:opacity-50"
                             >
                                 {processing && actionId === selectedReq.id ? 'Memproses...' : 'Tolak'}
                             </button>
                             <button
                                 onClick={() => handleAction(selectedReq.id, 'approve')}
                                 disabled={processing && actionId === selectedReq.id}
-                                className="flex-1 py-3 bg-[#5170FF] hover:bg-[#405ce6] text-white rounded-xl font-bold text-[14px] transition-colors shadow-sm disabled:opacity-50"
+                                className="flex-1 py-3 bg-green-600 hover:bg-green-700 text-white rounded-xl font-bold text-[14px] transition-colors shadow-md ring-2 ring-green-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-green-300 disabled:opacity-50"
                             >
                                 {processing && actionId === selectedReq.id ? 'Memproses...' : 'Setujui Permintaan'}
                             </button>

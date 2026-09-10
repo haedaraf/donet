@@ -15,10 +15,9 @@ class HistoryController extends Controller
             abort(403);
         }
 
-        $histories = DonationRequest::with(['donation.images', 'recipient', 'donation.category'])
-            ->whereHas('donation', function ($query) {
-                $query->where('user_id', Auth::id());
-            })
+        $histories = \App\Models\Donation::withTrashed()
+            ->with(['images', 'category', 'donationRequests.recipient'])
+            ->where('user_id', Auth::id())
             ->latest('updated_at')
             ->paginate(10);
 
@@ -36,9 +35,8 @@ class HistoryController extends Controller
             abort(403);
         }
 
-        $histories = DonationRequest::with(['donation.images', 'donation.user'])
+        $histories = DonationRequest::with(['donation.images', 'donation.user', 'donation'])
             ->where('recipient_id', Auth::id())
-            ->where('status', 'completed')
             ->latest('updated_at')
             ->paginate(10);
 
